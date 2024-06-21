@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCA - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px; 
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            text-align: center;
+            position: relative; /* Added position: relative; */
+        }
+
+        nav div {
+            display: inline-block;
+            color: white;
+            padding: 14px 16px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        nav div:hover {
+            background-color: #555;
+        }
+
+        a.router-link-login {
+            color: white;
+            text-decoration: solid;
+            font-size: larger;
+            margin-bottom: 500px;
+            position: absolute; /* Added position: absolute; */
+            top: 10px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .irca-details,
+        .section-details {
+            width: 44%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .irca-details {
+            width: 100%;
+        }
+
+        .section-details {
+            display: none;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #dfd4d4;
+            /* White text color for links */
+            text-decoration: none;
+            border: 1px solid white;
+            width: fit-content;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+            <img src="assets/finalimage.jpg"  style="opacity: 90%;" alt="IRCA Logo" width="210px" height="100px">
+        <h1>Integrated Rehabilitation Center for Addicts</h1>
+    </header>
+    
+
+    <nav>
+        <div (mouseover)="showDetails('about')" (mouseout)="hideDetails('about')">About</div>
+        <div (mouseover)="showDetails('services')" (mouseout)="hideDetails('services')">Services</div>
+        <div (mouseover)="showDetails('contact')" (mouseout)="hideDetails('contact')">Contact</div>
+    </nav>
+
+    <a routerLink="/login" class="router-link-login">Login</a>
+
+    <main>
+        <div class="irca-details" id="irca">
+            <h2>IRCA:</h2>
+            <p>
+                Integrated Rehabilitation Center for Addicts (IRCA) is dedicated to providing support and rehabilitation
+                services for individuals struggling with addiction.
+                Our mission is to help individuals overcome addiction and regain control of their lives through
+                personalized treatment plans and compassionate care.
+            </p>
+            <p>
+                Objectives of the Programme:
+            </p>
+            <ul>
+                <li>Preventive Education and Awareness Generation: To create awareness and educate the people for
+                    Prevention of Alcoholism and substance (Drugs) Abuse on the individual, the family, the workplace,
+                    and society at large.</li>
+                <li>To provide for the whole range of community-based services for the identification, motivation,
+                    counseling, de-addiction, aftercare, and rehabilitation for Whole Person Recovery (WPR) of addicts
+                    to make a person drug-free, crime-free, and gainfully employed.</li>
+            </ul>
+        </div>
+
+        <div class="section-details" id="about">
+            <h3>IRCA's Mission:</h3>
+            <ul>
+                <li>To provide integrated and holistic services for the rehabilitation of substance-dependent individuals.</li>
+                <li>To create awareness about the harmful effects of drug abuse and promote preventive education.</li>
+            </ul>
+        </div>
+    
+
+        <div class="section-details" id="services">
+            <h3>Services Details</h3>
+            <ol>
+                <li>Medical Detoxification</li>
+                <li>Psychological Counseling</li>
+                <li>Social Support</li>
+                <li>Safe and Supportive Environment</li>
+            </ol>
+        </div>
+
+        <div class="section-details" id="contact">
+            <h3>Contact Details</h3>
+            <p>
+                HOPE RECOVERY CENTER
+                For inquiries and assistance, please contact us:<br>
+                <!-- Email: infoirca.org -->
+                <br>Phone:+91 94492 05853<br>
+                Address: Address: &, Janatha Plot, Post, opp. to KLS School, Piranwadi, Belagavi, Karnataka 590014
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Integrated Rehabilitation Center for Addicts
+    </footer>
+
+</body>
+
+</html>

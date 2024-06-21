@@ -1,0 +1,189 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-between; /* Align items at each end of the container */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .next-link, .prev-link {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 252, 252);
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  :root {
+  --BodyFont: "Calibri";
+  --Lgrey: "rgba(209, 209, 209, 0.922)";
+  --Lteal: "rgb(233, 255, 250);";
+
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+* {
+  font-family: var(--BodyFont);
+  color: #000000;
+    line-height: 2;
+  }
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+h2 {
+  margin-bottom: 0%;
+}
+
+h3 {
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+#b1 a {
+  position: relative;
+  left: 47%;
+  text-decoration: none;
+  border: 2px double rgb(100, 97, 97);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#b1 #b2 {
+  position: relative;
+  left: 47%;
+  text-decoration: none;
+  border: 2px double rgb(100, 97, 97);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+/* #b2{
+  position: relative;
+  float: right;
+  margin-bottom: 10px;
+} */
+h2,
+h3 {
+  text-align: left;
+  padding: 0%;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  /* border: none; */
+  padding: 5px;
+  font-size: medium;
+  background-color: rgba(255, 255, 255, 0.922);
+
+}
+
+
+table {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+
+}
+
+textarea,
+input,
+select {
+  border: none;
+  resize: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  outline: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  font-family: var(--Lteal);
+  color: #ffffff;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+fieldset {
+  border: none;
+  /* border: 2px solid black; */
+
+  padding: 10px;
+}
+
+body {
+  max-width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* border: 4px solid black; */
+  overflow-x: hidden;
+
+  border: double 6px rgb(66, 64, 64);
+    outline: solid 2px rgb(68, 64, 64);
+
+    padding-left: 20px;
+    padding-right: 20px;
+  /* width: 1200px; */
+  /* border: 2px solid black; */
+  /* margin: 7px; */
+
+  background-color: var(--Lgrey);
+} 
+select {
+width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+#b1 #b2{
+  position: relative;
+  left: 47%;
+  text-decoration: none;
+  border: 2px double rgb(100, 97, 97);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+}  */
+
+
+/* fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h4 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+input[type="radio"] {
+  margin-left: 5px;
+  vertical-align: middle;
+} */

@@ -1,0 +1,801 @@
+<style>
+  body {
+    width: 16in;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .id1 {
+    border: double 6px rgb(66, 64, 64);
+    outline: solid 2px rgb(68, 64, 64);
+    margin: 50px;
+    margin-top: 40px;
+    min-height: 60vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+  #p1 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    /* width: 70%; */
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*margin-top: 20px;*/
+    /* box-sizing: border-box; */
+  }
+
+  th,td {
+    /*border: 1px solid black;*/
+    padding: 8px;
+    text-align:left;
+    /*width:30%;*/
+  }
+  table, th, td 
+    {
+       border: 1px solid black;
+       /* width:30%; */
+    }
+  td input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .form-input {
+    width: 0%;
+    padding: 0.5px;
+    margin-left: 20px;
+    border: 0.5px solid #fff8f8;
+    /* border: 1px solid #c4bcbc; */
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 6px;
+  }
+  .form-column{
+    width:150px;
+    margin-right:10px;
+  }
+  hr {
+    border-color: black;
+    margin-bottom: 20%;
+  }
+
+  #p2 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    /* width: 70%; */
+  }
+
+  #p2 p input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    width: 50%;
+  }
+
+  #nk {
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+  #b1 a {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  #b1 #b2 {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    left: 69%;
+  }
+  .remove-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    color: rgb(219, 34, 34);
+    font-weight: bold;
+    font-size: 14px;
+    background: rgb(209, 83, 83);
+    border-radius: 50%;
+    /* padding: 2px; */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+  }
+
+  .remove-button:hover {
+    opacity: 1; /* Visible on hover */
+  }
+
+  .form-input {
+    width: 20%;
+  }
+</style>
+
+<body>
+  <div class="id1">
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+      <h1>Medical Form</h1>
+      Name:<input
+        type="text"
+        id="nm"
+        formControlName="name_8"
+        style="width: 250px; border: none"
+        pattern="[A-Za-z ]*" 
+        onkeydown="return /[a-zA-Z]/.test(event.key)"
+      />&nbsp;&nbsp;&nbsp; Age:<input
+        type="number"
+        id="ag"
+        formControlName="age_8"
+        style="width: 250px; border: none"
+      />&nbsp;&nbsp;&nbsp; Date of registeration:<input
+        type="date"
+        id="dor"
+        formControlName="dor_8"
+        style="width: 250px; border: none"
+      />
+      <br />
+      <b>Drinking/Drug history</b><br />
+      Details of Alcohol/Drug abused
+      <div class="table-container">
+      <table class="w-full text-left">
+        <thead>
+          <tr>
+            <th class="pb-1 border-b-1">Drug</th>
+            <th class="pb-1 border-b-1">Age of <br>first use</th>
+            <th class="pb-1 border-b-1">Years of <br>use</th>
+            <th class="pb-1 border-b-1">Years of<br>excessive<br>use</th>
+            <th class="pb-1 border-b-1">Specific <br>type of <br>Drugs</th>
+            <th class="pb-1 border-b-1">Route of admini<br>stration</th>
+            <th class="pb-1 border-b-1">Frequency <br>of use in <br>the last 30 days</th>
+            <th class="pb-1 border-b-1">Quantity<br> used in <br>the last<br> 30 days</th>
+            <th class="pb-1 border-b-1">Past<br> use if<br> any</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <!-- <input
+                type="text"
+                id="dep"
+                formControlName="dep"
+                style="width: 250px; border: none"
+              />--><b>Depressants</b><br />
+              Alcohol<br />
+              Tranquilizers<br />
+              Sedatives/<br />
+              Hypnotics<br />
+              Tobacco<br />
+              Panmasala
+            </td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="c1" formControlName="age1_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="c2" formControlName="you1_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="c3" formControlName="yoeu1_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="text"  id="c4" formControlName="stod1_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="c5" formControlName="roas_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="c6" formControlName="foui_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="c7" formControlName="qui_8" style="width: 50%; border: black; padding:10px;"></div></td>
+            <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="c8" formControlName="puia_8" style="width: 50%; border: black; padding:10px;"></div></td>
+          </tr>
+          <tr>
+            <td >
+              <b>Narcotic Analgesic</b><br /> 
+              Opium,<br />
+              Heroin/Brown<br />
+              sugar,<br />
+              Morphine,<br />
+              Codeine<br />
+              Pentazocine<br />
+              Buprenorphine
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a1"
+                  formControlName="age2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a2"
+                  formControlName="you2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a3"
+                  formControlName="yoeu2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a4"
+                  formControlName="stod2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a5"
+                  formControlName="roas2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a6"
+                  formControlName="foui2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a7"
+                  formControlName="qui2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a8"
+                  formControlName="puia2_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Cannabis</b><br />
+              Ganja/Charas,<br />
+              Hashish,<br />
+              Bhang<br />
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a9"
+                  formControlName="age3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a10"
+                  formControlName="you3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a11"
+                  formControlName="yoeu3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a12"
+                  formControlName="stod3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a13"
+                  formControlName="roas3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a14"
+                  formControlName="foui3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a15"
+                  formControlName="qui3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a16"
+                  formControlName="puia3_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Stimulants</b><br />
+              Amphetamine,<br />
+              Cocaine,<br />
+              Ecstasy<br />
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a17"
+                  formControlName="age4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a18"
+                  formControlName="you4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a19"
+                  formControlName="yoeu4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a20"
+                  formControlName="stod4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a21"
+                  formControlName="roas4_8"
+                  style="width: 250px; border: none; padding:10px;"/>
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a22"
+                  formControlName="foui4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a23"
+                  formControlName="qui4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a24"
+                  formControlName="puia4_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Hallucinogens</b><br /> 
+              LSD,PCP<br />
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a25"
+                  formControlName="age5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a26"
+                  formControlName="you5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a27"
+                  formControlName="yoeu5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a28"
+                  formControlName="stod5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a29"
+                  formControlName="roas5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a30"
+                  formControlName="foui5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a31"
+                  formControlName="qui5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a32"
+                  formControlName="puia5_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Inhalants</b><br />
+              Petrol,<br/>
+              Glue
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a33"
+                  formControlName="age6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a34"
+                  formControlName="you6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a35"
+                  formControlName="yoeu6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a36"
+                  formControlName="stod6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a37"
+                  formControlName="roas6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a38"
+                  formControlName="foui6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a39"
+                  formControlName="qui6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a40"
+                  formControlName="puia6_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+                <b>Substance not classified</b><br />
+              Cough syrup<br />
+              Antihistamine<br />
+              Antidepresant<br />
+              Antipsychotic<br />
+              Anti cholinergic<br />
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a41"
+                  formControlName="age7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a42"
+                  formControlName="you7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a43"
+                  formControlName="yoeu7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a44"
+                  formControlName="stod7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a45"
+                  formControlName="roas7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a46"
+                  formControlName="foui7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="number"
+                  id="a47"
+                  formControlName="qui7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="border px-4 py-2" contenteditable="true">
+                <input
+                  type="text"
+                  id="a48"
+                  formControlName="puia7_8"
+                  style="width: 250px; border: none; padding:10px;"
+                />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <br /><br /><br /><br />
+
+      <button type="submit" [disabled]="!formData.valid">Save</button>
+      <div id="b1">
+        <a
+          routerLink="../seventh"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>P</b></a
+        >
+        <b
+          id="b2"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(243, 237, 237);
+            display: inline-block;
+            vertical-align: top;
+          "
+          >8</b
+        >
+        <a
+          [routerLink]="[
+            '../page9',
+            { addictName: formData.get('addictname')?.value }
+          ]"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>N</b></a
+        >
+      </div>
+    </form>
+  </div>
+</body>

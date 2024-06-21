@@ -1,0 +1,132 @@
+
+<style>
+  body {
+      width: 100%;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
+   #id1 {
+      border: double 6px rgb(66, 64, 64);
+       outline: solid 2px rgb(68, 64, 64);
+       margin: 50px;
+       margin-top: 40px;
+       padding-left: 20px;
+       padding-right: 20px;
+       box-sizing: border-box; 
+  }
+  #nk{
+      border: none;
+      outline: none;
+      font-size: 16px;
+  }
+  h2{
+      margin-top: 14px;
+      text-align: center;
+  }
+  #n1{
+      padding-right: 30px;
+  }
+  input[type="text"]
+{
+    border: none;
+    overflow: hidden;
+    border-bottom: 2px dotted;
+    outline:none;
+    font-size: 12px;
+    width: 150px;
+}
+#b1 a{
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+    #b1 #b2{
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+   } 
+
+   #b1 a{
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+    #b1 #b2{
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+   } 
+   .image-wrapper2{
+    position: relative;
+      left: 49%;
+   }
+   .image-wrapper3{
+    position: relative;
+    display: inline-block;
+      left: 49%;
+   }
+
+</style>
+
+<body>
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+<div id="id1">
+  <u>
+<h2>Physical complications at the time of Admission</h2>
+</u>
+
+<textarea name="k1" name="PhysicalComplications" formControlName="PhysicalComplications" id="nk" cols="30" rows="30" style="width: 100%;"></textarea>
+<br>
+<br>
+<br>
+<h4 id="m">
+<!-- <input type="text" style="position: relative;"> -->
+<!-- <input type="text" style="position: relative; left:50%"> -->
+<br>
+<input type="file" [hidden]="hideChoose71" (change)="selectFile71($event)" >
+  <div class="image-wrapper">
+    <img [src]="url71" [hidden] = "hideButton71" alt="Selected image">
+    <button [hidden]="hideButton71"(click)="removeImage71()">×</button>
+  </div>
+<b>Examined By:</b>
+<input type="file" [hidden]="hideChoose72" (change)="selectFile72($event)" style="position: relative;
+left: 49%;">
+  <div class="image-wrapper3">
+    <img [src]="url72" [hidden] = "hideButton72" alt="Selected image" >
+    <button [hidden]="hideButton72"(click)="removeImage72()">×</button>
+  </div>
+  <br>
+<b style="position: relative; left:56%">Signature of the Family:</b>
+</h4> 
+
+<br>
+<button type="submit" [disabled]="!formData.valid">Save</button>
+
+<div id="b1">
+<a routerLink="../sixth" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a> 
+<b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">7</b>
+<a [routerLink]="['../page8', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+</div>
+</div>
+</form>   
+</body>

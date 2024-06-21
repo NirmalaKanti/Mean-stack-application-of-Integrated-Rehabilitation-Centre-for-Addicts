@@ -1,0 +1,243 @@
+<style>
+  body {
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+ .id1 {
+    border: double 6px rgb(66, 64, 64);
+     outline: solid 2px rgb(68, 64, 64);
+     margin: 50px; 
+     margin-top:40px;
+     min-height: 60vh;
+     padding-left: 20px;
+     padding-right: 20px;
+     box-sizing: border-box;
+}
+
+ #p1 input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+     /* width: 70%; */
+ }
+
+ table {
+    
+     width: 100%;
+     border: 1px solid black;
+     border-collapse: collapse;
+     margin-top: 20px; 
+     /* box-sizing: border-box; */
+ }
+
+ th, td {
+    
+     border: 1px solid black;
+     padding: 8px;
+ }
+
+ td input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+ }
+
+ .form-input {
+ width: 0%;
+ padding: 0.5px;
+ margin-left: 20px;
+ border: 0.5px solid #fff8f8;
+ /* border: 1px solid #c4bcbc; */
+ outline:none;
+ border-radius: 5px;
+ margin-bottom: 6px;
+}
+
+ hr {
+     border-color: black;
+     margin-bottom: 20%;
+ }
+  
+ #p2 input[type="text"] {
+    border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+     /* width: 70%; */
+ }
+
+ #p2 p input[type="text"] {
+    border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+     /* width: 70%; */
+ }
+
+ #nk{
+         border: none;
+         outline: none;
+         font-size: 15px;
+     }
+
+     #b1 a{
+     position: relative;
+         left: 48%;
+         text-decoration: none;
+         border: 2px double rgb(100, 97, 97);
+         border-radius: 3px;
+         padding-left: 9px;
+         padding-right: 9px;
+      }
+      #b1 #b2{
+     position: relative;
+         left: 48%;
+         text-decoration: none;
+         border: 2px double rgb(100, 97, 97);
+         border-radius: 3px;
+         padding-left: 9px;
+         padding-right: 9px;
+      } 
+
+      .image-container {
+position: relative;
+display: inline-block;
+margin-top: 10px ;
+left:69%;
+}
+.remove-button {
+position: absolute;
+top: 2px;
+right: 2px;
+cursor: pointer;
+color: rgb(219, 34, 34);
+font-weight: bold;
+font-size: 14px;
+background: rgb(209, 83, 83);
+border-radius: 50%;
+/* padding: 2px; */
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s; 
+}
+
+.remove-button:hover {
+opacity: 1; /* Visible on hover */
+}
+
+.form-input {
+width: 20%;
+/* Add other styles for the file input if needed */
+}
+</style>
+
+<body>
+ <div class="id1">
+     <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+<h1>Medication provided during treatment : Physical</h1>
+     <table class="w-full text-left">
+       <thead>
+           <tr>
+               <th class="pb-2 border-b-2">Date</th>
+               <th class="pb-2 border-b-2">Complaint</th>
+               <th class="pb-2 border-b-2">Medication / Reasons for continuing / Change of Medications</th>
+               <th class="pb-2 border-b-2">Signature</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc41" formControlName="date1_11" style="width: 250px; border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc42" formControlName="Complaint1_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc43" formControlName="Medication1_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc44" formControlName="Signature1_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc45" formControlName="date2_11"style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc46" formControlName="Complaint2_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc47" formControlName="Medication2_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc48" formControlName="Signature2_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc49" formControlName="date3_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc50" formControlName="Complaint3_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc51" formControlName="Medication3_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc52" formControlName="Signature3_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc53" formControlName="date4_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc54" formControlName="Complaint4_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc55" formControlName="Medication4_11" style="width: 390px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc56" formControlName="Signature4_11" style="width: 250px;border: none;" /></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc57" formControlName="date5_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc58" formControlName="Complaint5_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc59" formControlName="Medication5_11"  style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc60" formControlName="Signature5_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc61" formControlName="date6_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc62" formControlName="Complaint6_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc63" formControlName="Medication6_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc64" formControlName="Signature6_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc65" formControlName="date7_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc66" formControlName="Complaint7_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc67" formControlName="Medication7_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc68" formControlName="Signature7_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc69" formControlName="date8_11" style="width: 250px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc70" formControlName="Complaint8_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc71" formControlName="Medication8_11" style="width: 390px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc72" formControlName="Signature8_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc73" formControlName="date9_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc74" formControlName="Complaint9_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc75" formControlName="Medication9_11" style="width: 390px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc76" formControlName="Signature9_11" style="width: 250px;border: none;"/></td>
+           </tr>
+             <tr>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc77" formControlName="date10_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc78" formControlName="Complaint10_11" style="width: 250px;border: none;"/></td>
+               <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc79" formControlName="Medication10_11" style="width: 390px;border: none;" /></td>
+               <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc80" formControlName="Signature10_11" style="width: 250px;border: none;"/></td>
+           </tr>
+           <tr>
+            <td class="border px-4 py-2" contenteditable="true" ><input type="date" id="rc81" formControlName="date11_11" style="width: 250px;border: none;"/></td>
+            <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc82" formControlName="Complaint11_11" style="width: 250px;border: none;"/></td>
+            <td class="border px-4 py-2" contenteditable="true" ><input type="text" id="rc83" formControlName="Medication11_11" style="width: 390px;border: none;" /></td>
+            <td class="border px-4 py-2" contenteditable="true"><input type="text" id="rc84" formControlName="Signature11_11" style="width: 250px;border: none;"/></td>
+        </tr>    
+       </tbody>
+   </table>
+      <br><br><br><br>
+         <button type="submit" [disabled]="!formData.valid">Save</button>
+         <br>
+         <div id="b1">
+             <a [routerLink]="['../page10', { addictName: formData.get('addictname')?.value }]"  style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+              <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">11</b>
+             <a [routerLink]="['../page12', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+        </div>
+ </form>
+ </div>
+</body>

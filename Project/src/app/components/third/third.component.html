@@ -1,0 +1,197 @@
+<style>
+  h1{
+      text-align: center;
+  }
+
+  #letter_body{
+      border: double 6px rgb(66, 64, 64);
+      outline: solid 2px rgb(68, 64, 64);
+      margin: 50px; 
+      margin-top:40px;
+      min-height: 58vh;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+  }
+
+  #b1 a{
+  position: relative;
+  left: 48%;
+  text-decoration: none;
+  border: 2px double rgb(100, 97, 97);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+#b1 #b2{
+  position: relative;
+  left: 48%;
+  text-decoration: none;
+  border: 2px double rgb(100, 97, 97);
+  border-radius: 3px;
+  padding-left: 9px;
+  padding-right: 9px;
+} 
+
+  body {
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;          
+}
+
+  @media screen and (min-width:100%) {
+ body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+}
+
+input[type=text]
+{    
+border: none;
+overflow: hidden;
+border-bottom: 2px dotted;
+outline:none;
+font-size: 18px;
+}
+
+div{
+ padding-left: 30px;
+ padding-right: 20px;
+ padding-top: 20px;
+}
+
+#heading{
+ border: 2px solid black;
+ display: inline;
+ padding:7px;
+ font-size: 30px;
+ border-radius: 6px;
+}
+
+p{
+ font-weight: 300;
+ color: black;  
+ font-size: 17px;     
+}
+.image-container {
+position: relative;
+display: inline-block;
+left:69%;
+}
+
+
+.remove-button {
+position: absolute;
+top: 2px;
+right: 2px;
+cursor: pointer;
+color: rgb(219, 34, 34);
+font-weight: bold;
+font-size: 14px;
+background: rgb(209, 83, 83);
+border-radius: 50%;
+/* padding: 2px; */
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s; 
+}
+
+.remove-button:hover {
+opacity: 1; /* Visible on hover */
+}
+
+.form-input {
+width: 20%;
+/* Add other styles for the file input if needed */
+}
+.image-wrapper {
+    width: 30px;
+    position: relative;
+}
+
+.image-wrapper button {
+    position: absolute;
+    z-index: 1; /* Ensure button is above image */
+}
+
+.image-wrapper3{
+    position: relative;
+    display: inline-block;
+      left: 56%;
+   }
+   .image-wrapper2{
+    position: relative;
+    display: inline-block;
+      left: 59%;
+   }
+</style>
+<body>
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+<div id="letter_body">
+  <h1><div id="heading"><b>ಸಮ್ಮತಿ ಪತ್ರ</b></div></h1>
+<br>
+<br>
+<p>&emsp;&emsp;<b>ನಾನು ಶ್ರೀ <input type="text"  name="ಚಿಕಿತ್ಸಾರ್ಥಿಯಹೆಸರು" formControlName="ಚಿಕಿತ್ಸಾರ್ಥಿಯಹೆಸರು" lang="kn" accept-charset="UTF-8" style="width: 350px;" >, 
+  'ಹೋಪ್' ಅಮಲು ಚಿಕಿತ್ಸಾ ಹಾಗೂ ಪುನರ್ವಸತಿ ಕೇಂದ್ರ, ಬೆಳಗಾವಿ, ಇದರ ಮದ್ಯ ವರ್ಜನಾ ಚಿಕಿತ್ಸಾ ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ ಪಾಲ್ಗೊಳ್ಳಲು ದಿನಾಂಕ 
+  <input type="text" name="ಪಾಲ್ಗೊಳ್ಳಲುದಿನಾಂಕ " style="width: 120px;border: none;" formControlName="ಪಾಲ್ಗೊಳ್ಳಲುದಿನಾಂಕ ">ರಂದು ಸ್ವ ಇಚ್ಛೆಯಿಂದ ಬಂದಿರುತ್ತೇನೆ. ಈ ಬಗ್ಗೆ ನನ್ನ ಹಾಗೂ ಕುಟುಂಬಸ್ಥರ ಯಾವುದೇ ಆಕ್ಷೇಪವಿಲ್ಲ.</b></p>
+
+<br>
+<br>
+
+<p><b>&nbsp;&nbsp;&nbsp;&nbsp;ಚಿಕಿತ್ಸಾ ಅವಧಿಯಲ್ಲಿ ಸಂಘಟಕರು ಕೈಗೊಂಡ ಪ್ರತಿಯೊಂದು ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ ಸಕ್ರಿಯವಾಗಿ ಭಾಗವಹಿಸುತ್ತೇನೆ. ಸಂಸ್ಥೆಯ ಎಲ್ಲಾ ನಿಯಮಗಳನ್ನು ನಿಷ್ಠೆಯಿಂದ ಪಾಲಿಸುತ್ತೇನೆ ಹಾಗೂ ವೈದ್ಯರು ನಿಗದಿಪಡಿಸಿದ ದಿನಾಂಕದವರೆಗೆ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಪಾಲ್ಗೊಳ್ಳುತ್ತೇನೆ.</b></p>
+
+<!-- <p><b>ಸಂಘಟಕರ ಗಮನಕ್ಕೆ ಬಾರದೇ, ತಿಳಿಸದೇ, ಸಂಸ್ಥೆಯಿಂದ ಹೊರಗೆ ಹೋಗಿ ಯಾವುದೇ ಅನಾಹುತ ಸಂಭವಿಸಿ ಸಮಸ್ಯೆಯಾದಲ್ಲಿ ದಾಖಲು ಪಡಿಸಿದ ನಾವೇ ಜವಾಬ್ದಾರರಾಗಿರುತ್ತೇವೆ.</b></p> -->
+<br>
+<br>
+<p style="padding-left: 60%;"><b>ಚಿಕಿತ್ಸಾರ್ಥಿಯ</b></p>
+<p style="padding-left: 60%;" ><b>ಹೆಸರು</b> <input type="text"  name="ಚಿಕಿತ್ಸಾರ್ಥಿಯಹೆಸರು1" style="width: 150px;" formControlName="ಚಿಕಿತ್ಸಾರ್ಥಿಯಹೆಸರು1">&emsp;&emsp;</p>
+<input type="file" [hidden]="hideChoose1" (change)="selectFile1($event)" style="padding-left: 62%;" >
+<div class="image-wrapper2">
+<img [src]="url1" [hidden] = "hideButton1" alt="Selected image">
+<button [hidden]="hideButton1"(click)="removeImage1()">×</button>
+</div>
+<br><b style="padding-left: 63%;"> ಸಹಿ </b> 
+
+
+<br>
+<br>
+
+<p><b>ಸಂಘಟಕರ ಗಮನಕ್ಕೆ ಬಾರದೇ, ತಿಳಿಸದೇ, ಸಂಸ್ಥೆಯಿಂದ ಹೊರಗೆ ಹೋಗಿ ಯಾವುದೇ ಅನಾಹುತ ಸಂಭವಿಸಿ ಸಮಸ್ಯೆಯಾದಲ್ಲಿ ದಾಖಲು ಪಡಿಸಿದ ನಾವೇ ಜವಾಬ್ದಾರರು.</b></p>
+<br>
+<br>
+
+
+
+  <p style="padding-left: 60%;"><b>ದಾಖಲುಪಡಿಸಿದವರ</b></p>
+  
+  <p style="padding-left:60%;padding-top:0%;" ><b>ಹೆಸರು </b><input type="text" name="ದಾಖಲುಪಡಿಸಿದವರಹೆಸರು" style="width: 150px;" formControlName="ದಾಖಲುಪಡಿಸಿದವರಹೆಸರು"></p>
+  <input type="file" [hidden]="hideChoose2" (change)="selectFile2($event)" style="padding-left: 60%;">
+  <div class="image-wrapper3">
+  <img [src]="url2" [hidden] = "hideButton2" alt="Selected image" style="padding-left: 60%;">
+  <button [hidden]="hideButton2"(click)="removeImage2()">×</button>
+</div>
+<br>
+   &emsp;&emsp;<b style="padding-left: 64%;"> ಸಹಿ </b>
+
+
+
+<br>
+<p style="position: relative; left: 50%;"><b>ಮೊಬೈಲ್ ನಂ.</b><input type="text" style="width: 220px;" name="ಮೊಬೈಲ" formControlName="ಮೊಬೈಲ"></p>
+<br>
+
+<button type="submit" [disabled]="!formData.valid">Save</button>
+<div id="b1">
+  <a routerLink="../second" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+   <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">3</b>
+  <a  [routerLink]="['../fourth', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+</div>
+<!-- <div *ngIf="retrievedData">
+    <h2>Retrieved Data</h2>
+    <pre>{{ retrievedData | json }}</pre>
+  </div> -->
+</div>
+</form>
+</body>

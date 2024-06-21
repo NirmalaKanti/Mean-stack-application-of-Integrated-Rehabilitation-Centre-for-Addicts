@@ -1,0 +1,123 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 25</title>
+</head>
+
+<body>
+<h2></h2>
+
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+
+    <fieldset>
+        <h3>20. Adjustment Patterns</h3>
+        <table>
+
+            <tr>
+                <th style="width: 30%;">Relationship with family members</th>
+                <td>Parents</td>
+                <td>Siblings</td>
+                <td>Spouse</td>
+                <td>Children</td>
+            </tr>
+            <tr formGroupName="relation1_25">
+                <th style="width: 30%;">No family(Dead)</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr formGroupName="relation2_25">
+                <th style="width: 30%;">Disowned by family/ mutual rejection</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr formGroupName="relation3_25">
+                <th style="width: 30%;">Mixed or indifferent feelings</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr formGroupName="relation4_25">
+                <th style="width: 30%;">Usually friendly minor conflicts</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr formGroupName="relation5_25">
+                <th style="width: 30%;">Supportive</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+            <tr formGroupName="relation6_25">
+                <th style="width: 30%;">Not Applicable</th>
+                <td><input type="text" type="[A-Za-z ]" name="parent_25" formControlName="parent_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="sibling_25" formControlName="sibling_25"onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="spouse_25" formControlName="spouse_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+                <td><input type="text" type="[A-Za-z ]" name="child_25" formControlName="child_25" onkeydown="return /[a-zA-Z]/i.test(event.key)"></td>
+            </tr>
+        </table>
+
+        <h3 style="width: unset; display: inline-block;">Family damage as seen by the counseller</h3>
+        <label for="damage-type" style="vertical-align: middle;"><input type="radio" name="damagetype_25" formControlName="damagetype_25" 
+                style="width: unset; vertical-align: middle;" value="mild"/>Mild</label>
+        <label for="damage-type" style="vertical-align: middle;"><input type="radio" name="damagetype_25" formControlName="damagetype_25"
+                style="width: unset; vertical-align: middle;" value="moderate"/>Moderate</label>
+        <label for="damage-type" style="vertical-align: middle;"><input type="radio" name="damagetype_25" formControlName="damagetype_25"
+                style="width: unset; vertical-align: middle;" value="severe"/>Severe</label>
+    </fieldset>
+    <h2></h2>
+    <!--00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+    <fieldset>
+        <h2>V. Sexual history</h2>
+        <h4></h4>
+        <table>
+            <tr>
+                <th style="width: 60%;">22. Record extra marital experiences</th>
+                <td><input type="radio" name="extramarital_25" formControlName="extramarital_25" style="width: unset; vertical-align: middle;" value="yes"/>Yes</td>
+                <td><input type="radio" name="extramarital_25" formControlName="extramarital_25" style="width: unset; vertical-align: middle;" value="no"/>No</td>
+                <td><input type="radio" name="extramarital_25" formControlName="extramarital_25" style="width: unset; vertical-align: middle;" value="n/a"/>N/A</td>
+            </tr>
+        </table>
+    </fieldset>
+    <h3></h3>
+    <fieldset>
+        <table>
+            <h3>If present,</h3>
+            <tr>
+                <th>-Age of Partner:</th>
+                <td colspan="2"><input type="number" rows="1" name="age_25" formControlName="age_25"></td>
+            </tr>
+            <tr>
+                <th style="width: 60%;">-Is it a sustained relationship</th>
+                <td><input type="radio" name="sustrel_25" formControlName="sustrel_25" style="width: unset; vertical-align: middle;" value="yes"/>Yes</td>
+                <td><input type="radio" name="sustrel_25" formControlName="sustrel_25" style="width: unset; vertical-align: middle;" value="no"/>No</td>
+            </tr>
+            <tr>
+                <th style="width: 60%;">-For how many years have you known each other?</th>
+                <td colspan="2"><input type="number" name="years_25" formControlName="years_25" rows="1"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+<h3></h3>
+<div>
+    <button type="submit" [disabled]="!formData.valid">Save</button>
+</div>
+<h3></h3>
+<div id="b1">
+    <a routerLink="../page24"
+        style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+    <b id="b2"
+        style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">25</b>
+    <a routerLink="../page26"
+        style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+</div>
+</form>
+</body>

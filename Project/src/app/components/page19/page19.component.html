@@ -1,0 +1,363 @@
+
+<style>
+  body {
+      width: 100%;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .id1 {
+      border: double 6px rgb(66, 64, 64);
+      outline: solid 2px rgb(68, 64, 64);
+      margin: 50px;
+      margin-top: 40px;
+      min-height: 60vh;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    input[type="text"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 250px;
+    }
+
+    input[type="number"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    input[type="date"],
+    input[type="time"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    hr {
+      border-color: black;
+      margin-bottom: 20%;
+    }
+
+    #b1 a,
+    #b2 {
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    #b2 {
+      background-color: rgb(243, 237, 237);
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      left: 69%;
+    }
+
+    .remove-button {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+      color: rgb(219, 34, 34);
+      font-weight: bold;
+      font-size: 14px;
+      background: rgb(209, 83, 83);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .remove-button:hover {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="id1">
+      <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <h1>Urine Sugar Chart</h1>
+        Name:<input type="text" name="name_19" formControlName="name_19" style="border: none;"><br>
+        Reg ID:<input type="text" name="regid_19" formControlName="regid_19" style="border: none;"><br>
+        Age:<input type="number" name="age_19" formControlName="age_19" style="border: none;"><br>
+        <div class="table-container">
+        <table class="w-full text-left">
+          <thead>
+            <tr>
+              <th class="pb-1 border-b-1">Colour of Urine</th>
+              <th class="pb-1 border-b-1">AM PM <br>Date</th>
+              <th class="pb-1 border-b-1">AM PM <br>Date</th>
+              <th class="pb-1 border-b-1">AM PM<br>Date</th>
+              <th class="pb-1 border-b-1">AM PM<br>Date</th>
+              <th class="pb-1 border-b-1">AM PM<br>Date</th>
+              <th class="pb-1 border-b-1">AM PM<br>Date</th>
+              <th class="pb-1 border-b-1">AM PM<br>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr formGroupName="reddetail_19">
+              <td>Red</td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+            </tr>
+            <tr formGroupName="orangedetail_19">
+                <td>Orange</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="yellowdetail_19">
+                <td>Yellow</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="greendetail_19">
+                <td>Green</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="bluedetail_19">
+                <td>Blue</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="antidiabeticdetail_19">
+                <td>Anti Diabetic</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="medidetail_19">
+                <td>Medication (Dosage)</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+              <tr formGroupName="insulindetail_19">
+                <td>Insulin (Dosage)</td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date1_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date2_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date3_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date4_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date5_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date6_19" style="width: 100%; border: black"></div></td>
+                <td><div class="border px-4 py-2" contenteditable="true"><input type="date" formControlName="date7_19" style="width: 100%; border: black"></div></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+    <h4></h4>
+    <h1>Temperature Chart</h1>
+    <div class="table-container">
+        <table class="w-full text-left">
+            <thead>
+                <tr formGroupName="tempdatedetail_19">
+                <th>Date</th>
+                <td><input type="date" name="tdate1_19" formControlName="tdate1_19" style="border: none;"></td>
+                <td><input type="date" name="tdate2_19" formControlName="tdate2_19" style="border: none;"></td>
+                <td><input type="date" name="tdate3_19" formControlName="tdate3_19" style="border: none;"></td>
+                <td><input type="date" name="tdate4_19" formControlName="tdate4_19" style="border: none;"></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Hours</th>
+                <td>7          13            19</td>
+                <td>7          13            19</td>
+                <td>7          13            19</td>
+                <td>7          13            19</td>
+                </tr>
+                <tr formGroupName="fdetail_19">
+                    <td>F</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f107detail_19">
+                    <td>107'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f106detail_19">
+                    <td>106'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f105detail_19">
+                    <td>105'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f104detail_19">
+                    <td>104'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f103detail_19">
+                    <td>103'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f102detail_19">
+                    <td>102'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f101detail_19">
+                    <td>101'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f100detail_19">
+                    <td>100'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f99detail_19">
+                    <td>99'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f98detail_19">
+                    <td>98'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="f97detail_19">
+                    <td>97'</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f1_19" formControlName="f1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f2_19" formControlName="f2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f3_19" formControlName="f3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" name="f4_19" formControlName="f4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="pulse_19">
+                    <td>Pulse</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="p1_19" formControlName="p1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="p2_19" formControlName="p2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="p3_19" formControlName="p3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="p4_19" formControlName="p4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr formGroupName="bp_19">
+                    <td>B.P.</td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp1_19" formControlName="bp1_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp2_19" formControlName="bp2_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp3_19" formControlName="bp3_19" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp4_19" formControlName="bp4_19" style="width: 100%; border: black"></div></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3></h3>
+    </div>
+      
+        <button type="submit" [disabled]="!formData.valid">Save</button>
+        <div id="b1">
+          <a routerLink="../page15" style="text-decoration: none;color: black;background-color: rgb(255, 252, 252);display: inline-block;vertical-align: top;"><b>P</b></a>
+          <b id="b2"style="text-decoration: none;color: black;background-color: rgb(243, 237, 237);display: inline-block;vertical-align: top;">19</b>
+          <a [routerLink]="['../page20',{ addictName: formData.get('addictname')?.value }]"style="text-decoration: none;color: black;background-color: rgb(255, 252, 252);display: inline-block;vertical-align: top;"><b>N</b></a>
+        </div>
+      </form>
+    </div>
+  </body>

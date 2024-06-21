@@ -1,0 +1,309 @@
+<style>
+  body {
+          width: 100%;
+          font-size: 15px;
+          margin: 0; 
+          padding: 0;
+         overflow-x: hidden; 
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 22px;
+    text-align: center;
+  }
+  .container {
+          border: double 6px rgb(66, 64, 64);
+           outline: solid 2px rgb(68, 64, 64);
+           margin: auto;
+           margin-top: 36px;
+           min-height: 60vh;
+           padding-left: 20px;
+           padding-right: 20px;
+            box-sizing: border-box; 
+      }
+  .form {
+    padding: 20px;
+    
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .form-row label {
+    width: 25%;
+    margin-right: 10px;
+  }
+
+  .form-input {
+    width: 20%;
+    padding: 2px;
+    border: 1px solid #f2eded;
+    /* border: 1px solid #c4bcbc; */
+    outline:none;
+    border-radius: 5px;
+    margin-bottom: 1px;
+  }
+
+  .form-input1 {
+    width: 5%;
+    padding: 1px;
+    border: 1px solid #f2eded;
+    /* border: 1px solid #c4bcbc; */
+    outline:none;
+    border-radius: 5px;
+    margin-bottom: 1px;
+  }
+
+  .form-textarea {
+    height: 100px;
+  }
+
+  .form-submit {
+    margin-top: 20px; /* Adjusted margin-top */
+    margin-bottom: 20px; /* Added margin-bottom */
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+ 
+ @media screen and (min-width:100%) {
+   body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+} 
+
+  .form-fields + .form-fields {
+    margin-left: 20px;
+  }
+
+  .side-heading {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  #b1 a{
+          position: relative;
+          left: 48%;
+          text-decoration: none;
+          border: 2px double rgb(100, 97, 97);
+          border-radius: 3px;
+          padding-left: 9px;
+          padding-right: 9px;
+ }
+
+ #b1 #b2{
+      position: relative;
+          left: 48%;
+          text-decoration: none;
+          border: 2px double rgb(100, 97, 97);
+          border-radius: 3px;
+          padding-left: 9px;
+          padding-right: 9px;
+       } 
+
+</style>
+
+<body>
+  <div class="container">
+    
+      <h1 style="margin-top: 6px; font-size:30px;">Intake Form</h1>
+      <input type="file" [hidden]="hideChoose1" (change)="selectFile1($event)" style="padding-left: 83%;">
+      <div class="image-wrapper" style="padding-left: 83%;">
+        <img [src]="url1" [hidden] = "hideButton1" alt="Selected image">
+        <button [hidden]="hideButton1"(click)="removeImage1()">×</button>
+      </div>
+   
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+
+  <!-- <div>
+    <label for="addictName">Addict Name:</label>
+    <input type="text" id="addictName" formControlName="addictName" />
+    <button (click)="fetchDataByAddictName()">Fetch Data</button>
+  </div> -->
+
+    <div class="form">
+      <div class="form-row">
+        <div class="form-fields">
+          <div class="form-row">
+            <label for="addictname">Registration ID</label>
+            <input type="text" name="addictname" id="name" class="form-input"  style="width: 50%" formControlName="addictname">
+
+            <div *ngIf="formData.get('addictname')?.hasError('required') && formData.get('addictname')?.touched" class="error-msg">
+            Registration ID is required
+            </div>
+            <div *ngIf="formData.get('addictname')?.hasError('invalidCharacters') && formData.get('addictname')?.dirty" class="error-msg">
+              Please enter only alphaneumeric characters for the Registration ID
+            </div>
+
+            <!-- <button type="button" (click)="fetchDataByAddictName()">Fetch Data</button> -->
+          </div>
+          <!-- <div *ngIf="retrievedData">
+            <h2>Retrieved Data</h2>
+            <pre>{{ retrievedData | json }}</pre>
+          </div> -->
+          
+          <div class="form-row">
+            <label for="original_pname">Name</label>
+            <input type="text" name="original_pname" id="original_pname" class="form-input"  style="width: 50%" formControlName="original_pname">
+          </div>
+
+          <div class="form-row">
+            <label for="maritalStatus">Marital Status</label>
+            <select name="maritalStatus" id="maritalStatus" class="form-input" formControlName="maritalStatus">
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="occupation">Occupation</label>
+            <select name="occupation" id="occupation" class="form-input" formControlName="occupation">
+              <option value="doctor">Doctor</option>
+              <option value="engineer">Engineer</option>
+              <option value="teacher">Teacher</option>
+              <option value="other">other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-row">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" class="form-input" formControlName="age" min=18 max=100>
+          </div>
+
+          <div class="form-row">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" class="form-input" formControlName="dob">
+          </div>
+
+          <div class="form-row">
+            <label for="dateOfIntake">Date of Intake</label>
+            <input type="date" name="dateOfIntake" id="dateOfIntake" class="form-input" formControlName="dateOfIntake">
+          </div>
+
+          <div class="form-row">
+            <label for="bpl">BPL: </label>
+            <select name="bpl" id="bpl" class="form-input" formControlName="bpl">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+     <p><b style="font-size: 12;">Accompanied by:</b></p>
+      
+
+      <div class="form-group">
+        <label for="yearOfDrinking">Drinking Initiation: </label>
+     
+        <input type="number" min="1900" max="2500" step="1" name="yearOfDrinking" id="yearOfDrinking" class="form-input" style="margin-left:130px;" formControlName="yearOfDrinking">
+      </div>
+
+      <div class="form-group">
+        <label for="yearOfExcessiveDrinking">Year of Excessive Drinking/Drug Abuse: </label>
+        <input type="number" min="1900" max="2500" step="1" name="yearOfExcessiveDrinking" id="yearOfExcessiveDrinking" class="form-input" style="margin-left:56px;" formControlName="yearOfExcessiveDrinking">
+      </div>
+    
+      <div class="form-group">
+        <label for="presentPatternOfDrinking">Present pattern of drinking/Drug Abuse: </label>
+        <!-- <input type="number" name="presentPatternOfDrinking" id="presentPatternOfDrinking" class="form-input" style="margin-left:51px;" formControlName="presentPatternOfDrinking"> -->
+        <input type="radio" name="presentPatternOfDrinking" formControlName="presentPatternOfDrinking" value="wholeday" style="margin-left:51px;">Whole Day
+        <input type="radio" name="presentPatternOfDrinking" formControlName="presentPatternOfDrinking" value="morning" style="margin-left:51px;">Morning
+        <input type="radio" name="presentPatternOfDrinking" formControlName="presentPatternOfDrinking" value="evening" style="margin-left:51px;">Evening
+        <input type="radio" name="presentPatternOfDrinking" formControlName="presentPatternOfDrinking" value="night" style="margin-left:51px;">Night
+
+      </div>
+    
+
+      <div class="form-group">
+        <div class="side-heading">Presence of:</div>
+
+              <li>
+                <label for="useOfOtherDrugs">Use of Other Drugs:</label>
+                <select name="useOfOtherDrugs" id="useOfOtherDrugs" class="form-input" style="margin-left:58px;" formControlName="useOfOtherDrugs">
+                  <option value="nil">Nil</option>
+                  <option value="mild">Past use only</option>
+                  <option value="moderate">Presently using</option>
+                </select>
+              </li>
+          <li>
+            <label for="psychiatricProblem">Psychiatric Problem</label>
+            <select name="psychiatricProblem" id="psychiatricProblem" class="form-input" style="margin-left:58px;" formControlName="psychiatricProblem">
+              <option value="nil">Nil</option>
+              <option value="mild">Mild</option>
+              <option value="moderate">Moderate</option>
+              <option value="severe">Severe</option>
+            </select>
+          </li>
+          <li>
+            <label for="denial">Denial</label>
+            <select name="denial" id="denial" class="form-input" style="margin-left:145px;" formControlName="denial">
+              <option value="none">None</option>
+              <option value="mild">Mild</option>
+              <option value="moderate">Moderate</option>
+              <option value="severe">Severe</option>
+            </select>
+          </li>
+          <br>
+      </div>
+
+      <div class="form-group">
+        <!-- Added space after Denial -->
+        <div class="side-heading">Physical Problems(Record Specifically):</div>
+        <textarea name="physicalProblems" id="physicalProblems" class="form-input1" row="1" style="width: 100%;" formControlName="physicalProblems"></textarea>
+     
+        <label for="priorTreatment">Prior Treatment:</label>
+        <select name="priorTreatment" id="priorTreatment" class="form-input" style="margin-left:50px;" formControlName="priorTreatment">
+          <option value="nil">Nil</option>
+          <option value="takenonce">Taken Once</option>
+          <option value="takentwice">Taken Twice</option>
+          <option value="morethantwice">More than twice</option>
+        </select>
+          <br>
+          <br>
+          <label for="use_of_other_drugs"><b>Willingness for Treatment:</b></label>
+          <select name="use_of_other_drugs" id="use_of_other_drugs" class="form-input" style="margin-left:58px;" formControlName="use_of_other_drugs">
+            <option value="Unwilling">Unwilling</option>
+            <option value="half-hearted">half-hearted</option>
+            <option value="willing">willing</option>
+          </select>
+
+        <div class="side-heading">Motivating factor for present treatment effort:</div>
+        <textarea name="motivatingFactor" id="motivatingFactor" class="form-input1" row="1" style="width: 100%;" formControlName="motivatingFactor"></textarea>
+      </div>
+    </div>
+    <!-- Include the addict name in the routerLink when navigating to the second component
+<a [routerLink]="['../second', { addictName: formData.get('addictname')?.value }]">Go to Second Component</a> -->
+
+    <button type="submit" [disabled]="!formData.valid">Save</button>
+    <div id="b1">
+      <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">1</b>
+      <a  [routerLink]="['../second', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+  </div>
+ 
+</form>
+  </div>
+  
+</body>

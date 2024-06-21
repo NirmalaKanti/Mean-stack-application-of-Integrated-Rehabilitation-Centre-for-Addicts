@@ -1,0 +1,218 @@
+
+
+<body>
+    <h2></h2>
+
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <table>
+                <tr>
+                    <th style="width: 60%; text-align: left;">If by choice, accepted by family (present status)</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="acceptedByFamily_24" formControlName="acceptedByFamily_24" value="Yes"
+                            style="width: unset; vertical-align: middle;"> Yes</td>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="acceptedByFamily_24" formControlName="acceptedByFamily_24" value=""
+                            style="width: unset; vertical-align: middle;">No </td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align: left;">14. Details regarding previous subsequent marriages, if
+                        any</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="previousMarriages_24" formControlName="previousMarriages_24" value=""
+                            style="width: unset; vertical-align: middle;"> Yes</td>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="previousMarriages_24" formControlName="previousMarriages_24" value="Yes"
+                            style="width: unset; vertical-align: middle;">No </td>
+                </tr>
+
+                <tr>
+                    <th style="width: 60%; text-align: left;">15. Have you been separated from your spouse due to your
+                        addiction?</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="separatedDueToAddiction_24" formControlName="separatedDueToAddiction_24"
+                            value="Yes" style="width: unset; vertical-align: middle;">Yes</td>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="separatedDueToAddiction_24" formControlName="separatedDueToAddiction_24"
+                            value="" style="width: unset; vertical-align: middle;">No</td>
+                </tr>
+
+                <tr>
+                    <th style="width: 50%; text-align: left;">16. Is patient suspicious of wife?</th>
+                    <td style="width: 30%; text-align: center;"><input type="radio" name="suspiciousOfWife_24" formControlName="suspiciousOfWife_24"
+                            value="UnderAlcoholDrugs" style="width: unset; vertical-align: middle;"> Under the influence of Alcohol/Drugs</td>
+                    <td style="width: 30%; text-align: center;"><input type="radio" name="suspiciousOfWife_24" formControlName="suspiciousOfWife_24"
+                            value="WhileAbstinence" style="width: unset; vertical-align: middle;"> While Abstinence</td>
+                </tr>
+            </table>
+        </fieldset>
+        <h4></h4>
+        <fieldset>
+            <table>
+                <!-- <tr>
+                    <th style="width: 60%; text-align: left;">17. Any instance of family violence?
+                    </th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="familyViolence_24" formControlName="familyViolence_24" value=""
+                            style="width: unset; vertical-align: middle;"> </td>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="familyViolence_24" formControlName="familyViolence_24" value="No"
+                            style="width: unset; vertical-align: middle;"> No</td>
+                </tr> -->
+                <tr>
+                    <th style="width: 60%; text-align: left;">17. Any instance of family violence?
+                    </th>
+                    <td style="width: 20%; text-align: center;">Yes</td>
+                    <td style="width: 20%; text-align: center;">No</td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align:left;">Physical violence directed towards family members</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="familyViolence_24" formControlName="familyViolence_24" value="Yes"
+                        style="width: unset; vertical-align: middle;"> </td>
+                <td style="width: 20%; text-align: center;"><input type="radio" name="familyViolence_24" formControlName="familyViolence_24" value="No"
+                        style="width: unset; vertical-align: middle;"></td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align: left;">Verbially abusive</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="verbalabuse_24" formControlName="verbalabuse_24" value="Yes"
+                        style="width: unset; vertical-align: middle;"> </td>
+                <td style="width: 20%; text-align: center;"><input type="radio" name="verbalabuse_24" formControlName="verbalabuse_24" value="No"
+                        style="width: unset; vertical-align: middle;"> </td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align: left;">Violent incidents with neighbours and outsiders</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="neighbourviolence_24" formControlName="neighbourviolence_24" value="Yes"
+                        style="width: unset; vertical-align: middle;"> </td>
+                <td style="width: 20%; text-align: center;"><input type="radio" name="neighbourviolence_24" formControlName="neighbourviolence_24" value=""
+                        style="width: unset; vertical-align: middle;"> </td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align:left;">Breaking articles at home</th>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="articlebreak_24" formControlName="articlebreak_24" value="Yes"
+                            style="width: unset; vertical-align: middle;"> </td>
+                    <td style="width: 20%; text-align: center;"><input type="radio" name="articlebreak_24" formControlName="articlebreak_24" value=""
+                            style="width: unset; vertical-align: middle;"> </td>
+                </tr>
+
+                <tr>
+                    <th style="width: 60%; text-align: left;">18. Details regarding children (. of children)</th>
+                    <td style="width: 20%; text-align: left;">Male: <input type="number" name="maleChildrenCount" formControlName="maleChildrenCount"
+                            min="0"></td>
+                    <td style="width: 20%; text-align: left;">Female: <input type="number" name="femaleChildrenCount" formControlName="femaleChildrenCount"
+                            min="0">
+                    </td>
+                </tr>
+                <tr>
+                    <th style="width: 60%; text-align: left;"></th>
+                    <td style="width: 20%; text-align: left;"></td>
+                    <td style="width: 20%; text-align: left;"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <h4></h4>
+        <fieldset>
+            <table>
+
+
+                <h4>19. Health status of the family Has there been
+                    anyone in your family who has suffered from any of these problems?</h4>
+
+
+                <table style="width: 100%; border-collapse: collapse; text-align: center; padding: 5px; margin: auto;">
+                    <tr>
+                        <th style="text-align: center; border: 1px solid black;" rowspan="2">Problems</th>
+                        <th colspan="4">Parents & Siblings</th>
+                        <th colspan="4">Wife/Children</th>
+                    </tr>
+                    <tr>
+                        <td>Yes</td>
+                        <td>Relationship</td>
+                        <td>No </td>
+                        <td>Don't Know</td>
+                        <td>Yes</td>
+                        <td>Relationship</td>
+                        <td>No</td>
+                        <td>Don't Know</td>
+                    </tr>
+                    <tr formGroupName="health1_24">
+                        <td>Major Depression</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                    <tr formGroupName="health2_24">
+                        <td>Suicide/Attempted Suicide</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                    <tr formGroupName="health3_24">
+                        <td>Psychiatric Illness</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                    <tr formGroupName="health4_24">
+                        <td>Alcohol Dependence</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                    <tr formGroupName="health5_24">
+                        <td>Drug Dependence</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                    <tr formGroupName="health6_24">
+                        <td>Any Other</td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="yes"></td>
+                        <td><input type="text" name="psrelation_24" formControlName="psrelation_24"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="no"></td>
+                        <td><input type="radio" name="pschoice_24" formControlName="pschoice_24" value="dontknow"></td>
+            
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="yes"></td>
+                        <td><input type="text" name="wcrelation_24" formControlName="wcrelation_24"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="no"></td>
+                        <td><input type="radio" name="wcchoice_24" formControlName="wcchoice_24" value="dontknow"></td>
+                    </tr>
+                </table>
+            </table>
+        </fieldset>
+        <h3></h3>
+        <div>
+            <button type="submit" [disabled]="!formData.valid">Save</button>
+        </div>
+        <h3></h3>
+        <div id="b1">
+            <a routerLink="../page23"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+            <b id="b2"
+                style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">24</b>
+            <a routerLink="../page25"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+        </div>
+    </form>
+</body>

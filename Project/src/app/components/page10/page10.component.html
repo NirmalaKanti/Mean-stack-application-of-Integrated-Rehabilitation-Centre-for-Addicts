@@ -1,0 +1,333 @@
+<style>
+  body {
+    width: 100%;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 22px;
+    text-align: center;
+  }
+
+  .container {
+    border: double 6px rgb(66, 64, 64);
+    outline: solid 2px rgb(68, 64, 64);
+    margin: auto;
+    margin-top: 36px;
+    min-height: 60vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .form {
+    padding: 20px;
+
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .form-row label {
+    width: 25%;
+    margin-right: 10px;
+  }
+
+  .form-input {
+    width: 20%;
+    padding: 2px;
+    border: 1px solid #f2eded;
+    /* border: 1px solid #c4bcbc; */
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 1px;
+  }
+
+  .form-input1 {
+    width: 5%;
+    padding: 1px;
+    border: 1px solid #f2eded;
+    /* border: 1px solid #c4bcbc; */
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 1px;
+  }
+
+  .form-textarea {
+    height: 100px;
+  }
+
+  .form-submit {
+    margin-top: 20px;
+    /* Adjusted margin-top */
+    margin-bottom: 20px;
+    /* Added margin-bottom */
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  @media screen and (min-width:100%) {
+    body {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+
+  .form-fields+.form-fields {
+    margin-left: 20px;
+  }
+
+  .side-heading {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  #b1 a {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  #b1 #b2 {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+</style>
+
+<body>
+  <div class="container">
+
+
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+      <h1><b>PHYSICAL EXAMINATION ON THE DAY OF ADMISSION</b></h1><br>
+      <label>Pulse Rate:</label>
+      <input type="text" name="pulse_10" id="t1" style="width: 10%" formControlName="pulse_10">&nbsp;
+
+      <label>Blood Pressure:</label>
+      <input type="text" name="bloodp_10" id="t2" style="width: 10%" formControlName="bloodp_10">&nbsp;
+
+      <label>Temperature:</label>
+      <input type="text" name="temp_10" id="t3" style="width: 10%" formControlName="temp_10">&nbsp;
+
+      <label>Weight:</label>
+      <input type="text" name="weight_10" id="t4" style="width: 10%" formControlName="weight_10">&nbsp;
+
+      <h3>Which of the following symptoms are present during admissions:</h3>
+      <tr>
+        <td>
+          <li>
+            &nbsp;<label>Anemia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t5" formControlName="anemia_10" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></li>
+        </td>
+        <td>
+          <li>
+            <label>Jaundice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t6" formControlName="jaundice_10" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></li>
+        </td>
+        <td>
+          <li>
+            <label>Malnutrition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t7" formControlName="malnu_10" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></li>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <li><label>Lymph Nodes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t8" formControlName="lymph_10"><br></li>
+        </td>
+        <td>
+          <li><label>Loss of body hair &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="checkbox" id="t9"
+              formControlName="lobh_10"><br></li>
+        </td>
+        <li><label>Clubbing of nails &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+            type="checkbox" id="t10" formControlName="con_10"><br></li>
+      </tr>
+      <tr>
+        <td>
+          <li>
+            <label>Glossitis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t11" formControlName="glossi_10"><br></li>
+        </td>
+        <td>
+          <li><label>Wasting of muscles&nbsp;&nbsp;</label><input type="checkbox" id="t12" formControlName="wom_10"><br>
+          </li>
+        </td>
+        <td>
+          <li><label>Spider
+              naevi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t13" formControlName="naevi_10"><br></li>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <li><label>Flushed face&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t14" formControlName="flushedface_10"><br></li>
+        </td>
+        <td>
+          <li>
+            <label>Abscess&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t15" formControlName="abscess_10"><br></li>
+        </td>
+        <td>
+          <li>
+            <label>Gynaecomastia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t16" formControlName="gynae_10"><br></li>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <li><label>Palmar erythema&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="checkbox" id="t17"
+              formControlName="palery_10"><br></li>
+        </td>
+        <td>
+          <li><label>Hallucination&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t18" formControlName="hallu_10"><br></li>
+        </td>
+        <td>
+          <li><label>Injection
+              Marks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+              type="checkbox" id="t19" formControlName="injection_10"><br></li>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <li>Pedal Edema&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+              id="t20" formControlName="pedal_10"></li>
+        </td>
+      </tr>
+      <td>
+        <li>
+          Tremors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+            type="checkbox" id="t21" formControlName="tremors_10"></li>
+      </td>
+
+      <h3>Record abnormailities, if any, on examination of the following:</h3>
+
+      <table class="newtb">
+        <tr>
+          <th class="newth">System</th>
+          <th class="newth">YES</th>
+          <th class="newth">NO</th>
+        </tr>
+        <tr>
+          <td class="newtd"> Respiratory system:</td>
+          <td class="newtd"><input type="checkbox" id="t22" formControlName="Respiratory1_10" style="width:20px; border:none;">
+          </td>
+          <td class="newtd"><input type="checkbox" id="t23" formControlName="Respiratory2_10" style="width:20px; border:none;">
+          </td>
+        </tr>
+        <tr>
+        <tr>
+          <td class="newtd"> Cardio vascular system:</td>
+          <td class="newtd"><input type="checkbox" id="t24" formControlName="cardio1_10" style="width:20px; border:none;">
+          </td>
+          <td class="newtd"><input type="checkbox" id="t25" formControlName="cardio2_10" style="width:20px; border:none;">
+          </td>
+        </tr>
+        <tr>
+          <td class="newtd"> Gastro intestinal system:</td>
+          <td class="newtd"><input type="checkbox" id="t26" formControlName="gastro1_10" style="width:20px; border:none;">
+          </td>
+          <td class="newtd"><input type="checkbox" id="t27" formControlName="gastro2_10" style="width:20px; border:none;">
+          </td>
+        </tr>
+        <tr>
+          <td class="newtd"> Nervous system:</td>
+          <td class="newtd"><input type="checkbox" id="t28" formControlName="nervous1_10" style="width:20px; border:none;">
+          </td>
+          <td class="newtd"><input type="checkbox" id="t29" formControlName="nervous2_10" style="width:20px; border:none;">
+          </td>
+        </tr>
+      </table><br>
+      <h3>Any untoward incident occurred during treatment:</h3>&nbsp;<input type="text" name="incidento_10" id="t30"
+        style="width: 20%;" formControlName="incidento_10">&nbsp;<label>Yes/No</label><br>
+      <br>
+      <table>
+        <tr>
+          <td>If yes, describe the incident:<input type="text" name="dincident_10" id="t31"
+              style="width: 100%; border:none; padding:10px;" formControlName="dincident_10"></td>
+        </tr><br>
+        <tr>
+          <td>Action taken:<input type="text" name="action_10" id="t32" style="width: 100%; border:none;; padding:10px;"
+              formControlName="action_10"></td>
+        </tr><br>
+        <tr>
+          <td>Impression of counsellor:<input type="text" name="ioc_10" id="t33"
+              style="width: 100%; border:none;; padding:10px;" formControlName="ioc_10"></td>
+        </tr><br>
+        <tr>
+          <th style="text-align: left; border: none;" colspan="2">
+            <label for="denial_type" style="text-align: left; margin-left: 0%;">Denial:</label>
+          </th>
+          <td style="border: none;">
+            <input type="radio" placeholder=" " maxlength="20" name="denial_type_10" formControlName="denial_type_10"
+              value="mild" id="denial_type_present">
+            <label for="denial_type_mild">Mild</label>
+          </td>
+          <td style="border: none;">
+            <input type="radio" placeholder=" " maxlength="20" name="denial_type_10" formControlName="denial_type_10"
+              value="moderate" id="denial_type_absent">
+            <label for="denial_type_moderate">Moderate</label>
+          </td>
+          <td style="border: none;">
+            <input type="radio" placeholder=" " maxlength="20" name="denial_type_10" formControlName="denial_type_10"
+              value="severe" id="denial_type_absent">
+            <label for="denial_type_severe">Severe</label>
+          </td>
+        </tr>
+
+
+        <br><br>
+        <tr>
+          <td><b>Investigation:</b><input type="text" name="Investigation_10" id="t34"
+              style="width: 100%; border:none;; padding:10px;" formControlName="Investigation_10"></td>
+        </tr><br>
+      </table>
+      <tr>
+        <td>Certificate issued (Details):<input type="text" name="Certificate_10" id="t35"
+            style="width: 100%; border:none;; padding:10px;" formControlName="Certificate_10"></td>
+      </tr>
+      <br><br>
+      <button type="submit" [disabled]="!formData.valid">Save</button>
+      <div id="b1">
+        <a routerLink="../page9"
+          style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a>
+        <b id="b2"
+          style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">10</b>
+        <a routerLink="../page11"
+          style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+      </div>
+    </form>
+  </div>
+</body>

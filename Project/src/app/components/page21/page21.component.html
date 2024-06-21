@@ -1,0 +1,560 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 21</title>
+</head>
+
+<body>
+    <fieldset>
+    <h2>I. Family History</h2>
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        
+            <h3>1. Details regarding parents and siblings provide relevant information</h3>
+
+            <table CELLSPACING="none">
+                <tr>
+                    <th style="width: 5%;">Sl. No.</th>
+                    <th>Name</th>
+                    <th style="width: 12%;">Relation</th>
+                    <th style="width: 8%;">Age</th>
+                    <th>Income</th>
+                    <th>Education</th>
+                    <th>Use of intoxicants</th>
+                </tr>
+                <tr formGroupName="detail1_21">
+                    <td>1.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)">
+                    </td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" min="0"  name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail2_21">
+                    <td>2.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail3_21">
+                    <td>3.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail4_21">
+                    <td>4.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail5_21">
+                    <td>5.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail6_21">
+                    <td>6.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail7_21">
+                    <td>7.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail8_21">
+                    <td>8.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail9_21">
+                    <td>9.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr formGroupName="detail10_21">
+                    <td>10.</td>
+                    <td><input type="text" name="name_21" formControlName="name_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="relation_21" formControlName="relation_21">
+                            <option value="">Select Relation</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Grandparent">Grandparent</option>
+                            <option value="Grandchild">Grandchild</option>
+                        </select>
+                    </td>
+                    <td><input type="number" min="0" max="100" name="age_21" formControlName="age_21"></td>
+                    <td><input type="number" name="income_21" formControlName="income_21"></td>
+                    <td><input type="text" name="education_21" formControlName="education_21" pattern="[A-Za-z ]*"
+                            onkeydown="return /[a-zA-Z ]/i.test(event.key)"></td>
+                    <td>
+                        <select name="intoxicants_21" formControlName="intoxicants_21">
+                            <option value="">Select Intoxicant</option>
+                            <option value="none">None</option>
+                            <option value="Alcohol">Alcohol</option>
+                            <option value="Opioids">Opioids</option>
+                            <option value="Stimulants">Stimulants</option>
+                            <option value="Benzodiazepines">Benzodiazepines</option>
+                            <option value="Cannabis (Marijuana)">Cannabis (Marijuana)</option>
+                            <option value="Nicotine (Tobacco)">Nicotine (Tobacco)</option>
+                            <option value="Hallucinogens">Hallucinogens</option>
+                            <option value="Inhalants">Inhalants</option>
+                            <option value="Club Drugs">Club Drugs</option>
+                            <option value="Synthetic Cannabinoids">Synthetic Cannabinoids</option>
+                            <option value="Prescription Stimulants">Prescription Stimulants</option>
+                            <option value="Prescription Sedatives/Tranquilizers">Prescription Sedatives/Tranquilizers
+                            </option>
+                            <option value="Over-the-Counter Medications">Over-the-Counter Medications</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- Repeat this block for each row -->
+            </table>
+        
+
+        
+            <h3>Reason for death</h3>
+            <table name="F_reasons" CELLSPACING="none">
+                <tr>
+                    <th rowspan="2" style="width: 25%;">In case of death of parents: </th>
+                    <td style="width: 20%;">Father: </td>
+                    <td style="width: 55%;">
+                        <select name="father_death_reason" formControlName="father_death_reason"
+                            id="father_death_reason" style="width: 100%;">
+                            <option value="">Select the Reason for death</option>
+                            <option value="Natural Causes">Natural Causes</option>
+                            <option value="Accident">Accident</option>
+                            <option value="Illness">Illness</option>
+                            <option value="Suicide">Suicide</option>
+                            <option value="Homicide">Homicide</option>
+                            <option value="Unknown">Unknown</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Mother: </td>
+                    <td style="width: 55%;">
+                        <select name="mother_death_reason" formControlName="mother_death_reason"
+                            id="mother_death_reason" style="width: 100%;">
+                            <option value="">Select the Reason for death</option>
+                            <option value="Natural Causes">Natural Causes</option>
+                            <option value="Accident">Accident</option>
+                            <option value="Illness">Illness</option>
+                            <option value="Suicide">Suicide</option>
+                            <option value="Homicide">Homicide</option>
+                            <option value="Unknown">Unknown</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2" style="width: 25%;">How old were you at that time? </th>
+                    <td style="width: 20%;">Father's death: </td>
+                    <td style="width: 55%;"><input type="number" min="0" max="100" id="father_death_age"
+                            name="father_death_age" rows="1" formControlName="father_death_age"></td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">Mother's death: </td>
+                    <td style="width: 55%;"><input type="number" min="0" max="100" id="mother_death_age"
+                            name="mother_death_age" formControlName="mother_death_age" rows="1"></td>
+                </tr>
+            </table>
+        
+
+        
+            <h3></h3>
+            <table CELLSPACING="none">
+                <tr>
+                    <th style="width: 20%;">Mother tongue: </th>
+                    <td><input name="mtongue_21" type="text" type="[A-Za-z ]"
+                            onkeydown="return /[a-zA-Z]/i.test(event.key)" formControlName="mtongue_21" style="border: none;     border: none;
+                            background: none;
+                            outline: none;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 250px;"></td>
+                </tr>
+                <tr>
+                    <th style="width: 20%;">Languages known: </th>
+                    <td><textarea id="knownLang" rows="2" name="knownLang" formControlName="knownLang"></textarea></td>
+                </tr>
+            </table>
+
+        <!-- <fieldset class="motivation" style="margin-left: 50px;">
+            <h3>2. Motivation level during administration:</h3>
+            <h4 style="width: unset; display: inline-block;">Denial:</h4>
+            <input type="radio" placeholder=" " maxlength="20" name="denial_type" formControlName="denial_type"
+                value="present">Present <br>
+            <input type="radio" placeholder=" " maxlength="20" name="denial_type" formControlName="denial_type"
+                value="absent">Absent
+        </fieldset> -->
+
+        
+            <h3>2. Motivation level during administration:</h3>
+            <table style="width: 100px; margin-left: 0; border: none;">
+                <tr>
+                    <th style="text-align: left; border: none;" colspan="2">
+                        <label for="denial_type" style="text-align: left; margin-left: 0%;">Denial:</label>
+                    </th>
+                </tr>
+                <tr>
+                    <td style="border: none;">
+                        <input type="radio" placeholder=" " maxlength="20" name="denial_type"
+                            formControlName="denial_type" value="present" id="denial_type_present">
+                    </td>
+                    <td style="border: none;">
+                        <label for="denial_type_present">Present</label><br>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td style="border: none;"> <input type="radio" placeholder=" " maxlength="20" name="denial_type"
+                            formControlName="denial_type" value="absent" id="denial_type_absent"></td>
+                    <td style="border: none;">
+                        <label for="denial_type_absent">Absent</label>
+
+                    </td>
+                </tr>
+
+
+            </table>
+
+            <div style="margin-left: 20px;">
+
+
+            </div>
+
+
+        <h3></h3>
+        <div>
+            <button type="submit" [disabled]="!formData.valid">Save</button>
+        </div>
+        <!-- <a [routerLink]="['../pg22']"><b>Next</b></a> -->
+        <div id="b1">
+            <a routerLink="../page20"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+            <b id="b2"
+                style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">21</b>
+            <a routerLink="../page22"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+        </div>
+    </form>
+    </fieldset>
+</body>
+<router-outlet></router-outlet>

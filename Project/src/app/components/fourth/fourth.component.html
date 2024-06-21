@@ -1,0 +1,152 @@
+
+    <style>
+        body {
+            width: 100%;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+         }
+        
+    #id1 {
+            border: double 6px rgb(66, 64, 64);
+             outline: solid 2px rgb(68, 64, 64);
+             margin: 45px;
+             min-height: 60vh;
+             padding-left: 30px;
+             padding-right: 20px;
+             padding-right:3px;
+             box-sizing: border-box; 
+        }
+     
+      @media screen and (min-width:100%) {
+     body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+} 
+
+#b1 a{
+           position: relative;
+            left: 47%;
+            text-decoration: none;
+            border: 2px double rgb(100, 97, 97);
+            border-radius: 3px;
+            padding-left: 9px;
+            padding-right: 9px;
+          }
+
+
+          #b1 #b2{
+            position: relative;
+            left: 47%;
+            text-decoration: none;
+            border: 2px double rgb(100, 97, 97);
+            border-radius: 3px;
+            padding-left: 9px;
+            padding-right: 9px;
+         } 
+
+
+      #h3
+      {
+          text-align: center;
+          font-size: 20px;
+      }
+      
+
+      input[type="text"]
+      {
+          border: none;
+          overflow: hidden;
+          border-bottom: 2px dotted;
+          outline:none;
+          font-size: 12px;
+      }
+      
+      #e1{
+          font-size: 16px;
+      }
+      #p3{
+        /* text-align: center; */
+          text-align: justify;
+          text-justify: inter-character;
+      }
+     
+      </style>
+
+<body>
+         
+      
+        <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+          <div id="id1">
+      <!-- <b>
+        ಇವರಿಗೆ,
+        <br>
+        ನಿರ್ದೇಶಕರು
+        <br>
+        'ಹೊಪ್' ಅಮಲು ಚಿಕಿತ್ಸಾ ಮತ್ತು ಪುನರ್ವಸತಿ ಕೇಂದ್ರ, ಬೆಳಗಾವಿ.
+      
+      </b> -->
+      <p> ಇವರಿಗೆ, <br>ನಿರ್ದೇಶಕರು
+      <br>
+        'ಹೊಪ್' ಅಮಲು ಚಿಕಿತ್ಸಾ ಮತ್ತು ಪುನರ್ವಸತಿ ಕೇಂದ್ರ, ಬೆಳಗಾವಿ.</p>
+        <p id="h3"><b>ಘೋಷಣೆ ಮತ್ತು ನಷ್ಟ ಪರಿಹಾರ Declaration-Cum-Idemnity</b></p><br>
+   
+      <p>ನಾನು <input type="text" name="ಹೆಸರು" formControlName="ಹೆಸರು" lang="kn" accept-charset="UTF-8" f style="width: 200px;">ವಯಸ್ಸಿನ ಭಾರತೀಯ ನಿವಾಸಿಯಾದ, ಸದ್ಯ <input type="text" name="ನಿವಾಸ" formControlName="ನಿವಾಸ" lang="kn" accept-charset="UTF-8" style="width: 200px;"> &nbsp;&nbsp;ಎಂಬಲ್ಲಿ &nbsp;ವಾಸಿಸುತ್ತಿದ್ದು 
+        ಈ ಮೂಲಕ ಘೋಷಣೆಗಳನ್ನು ವಿಧಿಬದ್ಧವಾಗಿ ಘೋಷಿಸುತ್ತಿದ್ದೇನೆ.</p>
+      
+      <p id="e1">I <input type="text" name="name" formControlName="name" style="width: 220px;" pattern="[A-Za-z ]*"
+        onkeydown="return /[a-zA-Z ]/i.test(event.key)">aged <input type="text" name="age" formControlName="age" style="width:70px;"> &nbsp; &nbsp; years of indian inhabitant presently residing
+      at <input type="text" name="place" formControlName="place" style="width: 200px;"> &nbsp;do hereby solemnly declare and state as under:</p>
+      
+      
+        <b>
+          <u>
+            ಸಾಕ್ಷಿದಾರರು :
+          </u>
+        </b>
+        <br>
+        <br>
+      
+      <p>ನಾವು(1)<input type="text" lang="kn" name="ಸಾಕ್ಷಿದಾರ1" formControlName="ಸಾಕ್ಷಿದಾರ1" accept-charset="UTF-8" style="width: 190px;">ವಯಸ್ಸು<input type="text" name="ನಿವಾಸ1" formControlName="ನಿವಾಸ1" lang="kn" accept-charset="UTF-8">ಎಂಬಲ್ಲಿ ವಾಸವಾಗಿದ್ದು
+      <br><br>
+      (2) <input type="text" lang="kn" name="ಸಾಕ್ಷಿದಾರ2" formControlName="ಸಾಕ್ಷಿದಾರ2" accept-charset="UTF-8"  style="width: 190px;"> ವಯಸ್ಸು <input type="text" lang="kn" name="ನಿವಾಸ2" formControlName="ನಿವಾಸ2" accept-charset="UTF-8">ಎಂಬಲ್ಲಿ ವಾಸವಾಗಿದ್ದು ಈ ಕೆಳಗಿನ ಘೋಷಣೆಗಳನ್ನು ವಿಧಿಬದ್ಧವಾಗಿ ಘೋಷಿಸುತ್ತಿದ್ದೇವೆ.</p>
+      
+      <p id="e1">We(1) <input type="text" name="name1" formControlName="name1" style="width: 180px;" pattern="[A-Za-z ]*"
+        onkeydown="return /[a-zA-Z ]/i.test(event.key)">aged <input type="text"style="width: 70px;" name="age1" formControlName="age1">years,residing at <input type="text" name="place1" formControlName="place1" style="width: 150px;"><br><br>(2)
+      <input type="text" name="name2" formControlName="name2" style="width: 180px;" >aged <input type="text" name="age2" formControlName="age2" style="width: 70px;"> years,residing at &nbsp;<input type="text" name="place2" formControlName="place2" style="width: 150px;">
+      do hereby solemnly declare and state under:</p>
+      
+      <p><b>1.</b> &nbsp;&nbsp;'ಹೋಪ್' ಅಮಲು ಚಿಕಿತ್ಸಾ ಹಾಗೂ ಪುನರ್ವಸತಿ ಕೇಂದ್ರ, ಬೆಳಗಾವಿ ಇವರು ನಡೆಸುತ್ತಿರುವ ಅಮಲು/ಪುನರ್ವಸತಿ ಚಿಕಿತ್ಸಾ ಕೇಂದ್ರಕ್ಕೆ ಸ್ವಯಂಪ್ರೇರಿತವಾಗಿ ಮತ್ತು ನನ್ನ ಸ್ವ ಇಚ್ಛೆಯ ಮೇರೆಗೆ ದಾಖಲಿಸಿಗೊಳ್ಳುತ್ತಿದ್ದೇನೆ.
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u style="font-size: 16px; text-decoration: none;">I have voluntarily and of my own accord admitted myself to the De-addiction/Rehabilitation centre run by Hope Recovery Centre, Belagavi.</u></p>
+      <p> <b>2.</b> &nbsp;&nbsp;ಸದರಿ ಸಮಗ್ರ ಚಿಕಿತ್ಸಾ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಔಷದೋಪಚಾರಗಳ ಬಗ್ಗೆ ವಿವರವಾಗಿ ನನಗೆ /ನಮಗೆ ಮಾಹಿತಿ ನೀಡಿರುತ್ತಾರೆ ಹಾಗೂ ಅವುಗಳಿಂದಾಗುವ ಪರಿಣಾಮಗಳ ಬಗ್ಗೆ ನಾನು ಸಂಪೂರ್ಣವಾಗಿ ಅರಿತುಕೊಂಡಿರುತ್ತೇನೆ/ವೆ.
+       <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u style="font-size: 16px; text-decoration: none;">I/We State that, I/We have been informed about the entire treatment and medication in detail and we also fully understand and am/are aware of the implications and consequences thereof.</u></p>
+      
+      <p ><b>3.</b> &nbsp;&nbsp;ಸದರಿ ಚಿಕಿತ್ಸಾ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಔಷದೋಪಚಾರದ ಅವಧಿಯಲ್ಲಿ ಅಥವಾ ತದನಂತರ ಉದ್ಭವಿಸಬಹುದಾದ ಸಂಪೂರ್ಣ ಜವಾಬ್ದಾರಿ, ಹೊರೆ, ಅಪಾಯ ಮತ್ತು ಪರಿಣಾಮಗಳ ಹೊಣೆಯನ್ನು ನಾನೇ / ನಾವು ಹೊತ್ತುಕೊಂಡಿರುತ್ತೇವೆ ಮತ್ತು ಯಾವುದೇ ರೀತಿಯಲ್ಲಿ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ 
+        ಇನ್ನು ಮುಂದಕ್ಕೆ ಸದರಿ ಚಿಕಿತ್ಸಾ ಕೇಂದ್ರದ ಸಿಬ್ಬಂದಿ ಮತ್ತು ಪ್ರತಿನಿಧಿಗಳನ್ನು
+         ಯಾವುದೇ ರೀತಿಯಲ್ಲಿಯೂ ಬಾಧ್ಯರನ್ನಾಗಲಿ ಮಾಡುವುದಿಲ್ಲ ಎಂದು ಘೋಷಿಸುತ್ತಾ ದೃಢೀಕರಿಸುತ್ತಿದ್ದೇನೆ.<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u style="font-size: 16px; text-decoration: none;">I/We declare and confirm that I/We have taken upon myself/ ourselves the entire responsibility,liability, risk and consequences
+         as may arise during or after the said treatment and medication and that I/We shall not in any manner and at any time hereafter hold the said treatment centre,
+         staff and representatives liable and or responsible in any manner.</u></p>
+      
+      <p><b>4.</b> &nbsp;&nbsp;ನಾನು/ನಾವು ಚಿಕಿತ್ಸಾ ಅವಧಿಯಲ್ಲಿ ಈ ಕೆಳಗೆ ಕೊಟ್ಟಿರುವ ವಿಷಯಗಳನ್ನು ಪಾಲಿಸುತ್ತೇನೆ, ತಿಳಿದಿರುತ್ತೇನೆ ಮತ್ತು ಒಪ್ಪಿಕೊಳ್ಳುತ್ತೇನೆ. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.ಪೆಟ್ಟಾದಾಗ ( ಗಾಯವಾದಾಗ) ಮಾರಕ ಅಥವಾ ಸಂಸ್ಥೆಯಿಂದ ತಪ್ಪಿಸಿಕೊಳ್ಳಲು ಪ್ರಯತ್ನಿಸುವಾಗ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.ಆತ್ಮ ಹತ್ಯೆಗೆ ಪ್ರಯತ್ನಿಸುವಾಗ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.ಚಿಕಿತ್ಸಾ ಸಮಯದಲ್ಲಿ ಕಂಡುಬರುವ ಹಿಂತೆಗೆತದ ಚಿಹ್ನೆಗಳು ಹಾಗೂ ಇತರ ಮಾನಸಿಕ ಸಮಸ್ಯೆಗಳ ಬಗ್ಗೆ (ಹಿಂಸಾತ್ಮಕ ವರ್ತನೆ, ಆತ್ಮಹತ್ಯೆ ಇತ್ಯಾದಿ) <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.ಡೈಸಲ್ಫಿರಮ್ ಮಾತ್ರೆ ಸೇವಿಸುವ ಸಂದರ್ಭದಲ್ಲಿ ಅಮಲು ಸೇವಿಸಿದಾಗ ಉಂಟಾಗುವ ಗಂಭೀರ ಸಮಸ್ಯೆಗಳ ಬಗ್ಗೆ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.ಚಿಕಿತ್ಸೆ ಪಡೆದ ನಂತರ ಔಷಧಿ ತೆಗೆದುಕೊಳ್ಳುವಾಗ ಉಂಟಾಗುವ ಅನಿರೀಕ್ಷಿತ ಅಡ್ಡ ಪರಿಣಾಮಗಳು, ಇನ್ನಿತರ ಸಮಸ್ಯೆಗಳಾದ ಖಿನ್ನತೆ, ಮಾನಸಿಕ ತೊಂದರೆ ಮತ್ತು 
+        ಎಚ್.ಐ.ವಿ ಯಿಂದಾಗಿ ಅವಕಾಶವಾದಿ ಸೋ೦ಕುಗಳ ಬಗ್ಗೆ
+      <br></p>
+      
+      <!-- <div id="tag"><a href=""> prev</a> <a href="">  next</a></div> -->
+      <button type="submit" [disabled]="!formData.valid">Save</button>
+      <div id="b1">
+        <a routerLink="../third" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+         <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">4</b>
+        <a routerLink="../fifth" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+   </div>
+</div>
+</form>
+</body>
+

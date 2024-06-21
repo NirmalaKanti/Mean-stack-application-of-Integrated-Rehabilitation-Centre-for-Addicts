@@ -1,0 +1,182 @@
+
+<body>
+    
+<h2></h2>
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <h3>8. Childhood/adolescence (before the age of 15 years)</h3>
+        <table style="width: 50%;">
+            <tr>
+                <th style="width: 50%;">Problems identified</th>
+                <th>Present</th>
+                <th>Absent</th>
+            </tr>
+
+            <tr>
+                <td>Running away from home</td>
+                <td><input type="radio" name="prob15_1" formControlName="prob15_1" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_1" formControlName="prob15_1" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Frequent physical fights and violence</td>
+                <td><input type="radio" name="prob15_2" formControlName="prob15_2" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_2" formControlName="prob15_2" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Destruction of others property</td>
+                <td><input type="radio" name="prob15_3" formControlName="prob15_3" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_3" formControlName="prob15_3" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Stealing</td>
+                <td><input type="radio" name="prob15_4" formControlName="prob15_4" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_4" formControlName="prob15_4" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Scholastic backwardness</td>
+                <td><input type="radio" name="prob15_5" formControlName="prob15_5" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_5" formControlName="prob15_5" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Experimenting with drugs/alcohol</td>
+                <td><input type="radio" name="prob15_6" formControlName="prob15_6" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_6" formControlName="prob15_6" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gambling</td>
+                <td><input type="radio" name="prob15_7" formControlName="prob15_7" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_7" formControlName="prob15_7" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Any other</td>
+                <td><input type="radio" name="prob15_8" formControlName="prob15_8" value="present" style="width: unset; vertical-align: middle;" /></td>
+                <td><input type="radio" name="prob15_8" formControlName="prob15_8" value="absent" style="width: unset; vertical-align: middle;" />
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+    <!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+
+    <h2>III. Educational history</h2>
+
+    <label style="display: flex; align-items: center;">
+        <h3 style="margin-right: 10px;">9. Years of education:</h3>
+        <input type="number" min="1" max="100" name="years_23" formControlName="years_23" class="inline" style="border: 1px solid black;">
+    </label>
+
+
+
+    <fieldset>
+        <h3>10. Achievements in the past</h3>
+        <table style="width: 40%; float: left;">
+            <tr>
+                <th style="width: 60%;">Achievements</th>
+                <th>Present</th>
+                <th>Absent</th>
+            </tr>
+
+            <tr>
+                <td>Good academic records</td>
+                <td><input type="radio" name="pastAch_1" formControlName="pastAch_1" style="width: unset; vertical-align: middle;" value="present"/></td>
+                <td><input type="radio" name="pastAch_1" formControlName="pastAch_1" style="width: unset; vertical-align: middle;" value="absent"/></td>
+            </tr>
+
+            <tr>
+                <td>High achiever in extracurricular activities</td>
+                <td><input type="radio" name="pastAch_2" formControlName="pastAch_2" style="width: unset; vertical-align: middle;" value="present"/></td>
+                <td><input type="radio" name="pastAch_2" formControlName="pastAch_2" style="width: unset; vertical-align: middle;" value="absent"/></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+
+    <h2>IV. Marital history</h2>
+    <h3>11. Details regarding spouse</h3>
+    <table>
+        <tr>
+            <th style="width: 30%;">Name</th>
+            <td><input type="text" type="[A-Za-z ]" name="name_23" formControlName="name_23" onkeydown="return /[a-zA-Z]/i.test(event.key)" rows="1">
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 30%;">Age</th>
+            <td><input type="number" min="1" max="100" name="age_23" formControlName="age_23" class="inline" style="border: 1px solid black; width: 100%; border: none; ">
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 30%;">Religion/Community</th>
+            <td><input type="text" type="[A-Za-z ]" name="religion_23" formControlName="religion_23" onkeydown="return /[a-zA-Z]/i.test(event.key)" rows="1">
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 30%;">Education</th>
+            <td><input type="text" type="[A-Za-z ]" name="education_23" formControlName="education_23" onkeydown="return /[a-zA-Z]/i.test(event.key)" rows="1">
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 30%;">Occupation</th>
+            <td><input type="text" type="[A-Za-z ]" name="occupation_23" formControlName="occupation_23" onkeydown="return /[a-zA-Z]/i.test(event.key)" rows="1">
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 30%;">Income per month</th>
+            <td><input type="number" name="income_23" formControlName="income_23" rows="1">
+            </td>
+        </tr>
+    </table>
+
+    <h4>Other Details about spouse (history of addiction in her family, her addiction history if any, any other
+        significant event in her life and attitude towards addiction)</h4>
+
+
+    <!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+
+    <table style="text-align: center;">
+        <tr>
+            <th style="width: 60%; text-align: left;">12. Years of married life</th>
+            <td colspan="2"><input type="number" min="1" max="100" name="myears_23" formControlName="myears_23" class="inline" style="border: 1px solid black; width: 100%; border: none; "></td>
+        </tr>
+        <tr>
+            <th style="width: 60%; text-align: left;">13. Is this marriage arranged or by choice?</th>
+            <td style="width: unset; vertical-align: middle;">Arranged <br>
+                <input type="radio" name="marriageType" formControlName="marriageType" value="Arranged">
+                
+            </td>
+            <td style="width: unset; vertical-align: middle;">Choice <br>
+                <input type="radio" name="marriageType" formControlName="marriageType" value="Choice">
+                
+            </td>
+        </tr>
+    </table>
+    <h3></h3>
+    <div>
+        <button type="submit"  [disabled]="!formData.valid" >Save</button>
+    </div>
+    <h3></h3>
+    <div id="b1">
+        <a routerLink="../page22" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+        <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">23</b>
+        <a routerLink="../page24" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+    </div>
+</form>
+</body>

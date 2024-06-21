@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 14</title>
+
+  <style>
+    body {
+      width: 100%;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .id1 {
+      border: double 6px rgb(66, 64, 64);
+      outline: solid 2px rgb(68, 64, 64);
+      margin: 50px;
+      margin-top: 40px;
+      min-height: 60vh;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    input[type="text"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 250px;
+    }
+
+    input[type="number"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    input[type="date"],
+    input[type="time"] {
+      border: none;
+      background: none;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    hr {
+      border-color: black;
+      margin-bottom: 20%;
+    }
+
+    #b1 a,
+    #b2 {
+      position: relative;
+      left: 48%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    #b2 {
+      background-color: rgb(243, 237, 237);
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+      left: 69%;
+    }
+
+    .remove-button {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+      color: rgb(219, 34, 34);
+      font-weight: bold;
+      font-size: 14px;
+      background: rgb(209, 83, 83);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .remove-button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="id1">
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+      <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B.P. CHART</h1>
+      <b>Name:</b><input type="text" name="name_14" formControlName="name_14" /><br><br>
+      <b>Reg. No:</b><input type="text" name="reg_14" formControlName="reg_14" /><br><br>
+      <div class="table-container">
+        <table class="w-full text-left">
+          <thead>
+            <tr>
+              <th class="pb-1 border-b-1">Date</th>
+              <th class="pb-1 border-b-1">Time</th>
+              <th class="pb-1 border-b-1">Years of use</th>
+              <th class="pb-1 border-b-1">B.P</th>
+              <th class="pb-1 border-b-1">Pulse</th>
+              <th class="pb-1 border-b-1">Weight</th>
+              <th class="pb-1 border-b-1">Temp.</th>
+              <th class="pb-1 border-b-1">Sign.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr formGroupName="bpdetail1_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail2_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail3_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail4_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail5_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail6_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail7_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail8_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail9_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+            <tr formGroupName="bpdetail10_14">
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="date" name="date_14"
+                    formControlName="date_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="time" name="time_14"
+                    formControlName="time_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="years_14"
+                    formControlName="years_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="bp_14"
+                    formControlName="bp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="pulse_14"
+                    formControlName="pulse_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="weight_14"
+                    formControlName="weight_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="number" name="temp_14"
+                    formControlName="temp_14" style="width: 100%; border: black"></div>
+              </td>
+              <td>
+                <div class="border px-4 py-2" contenteditable="true"><input type="text" name="sign_14"
+                    formControlName="sign_14" style="width: 100%; border: black"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br /><br /><br /><br />
+      <button type="submit" [disabled]="!formData.valid">Save</button>
+      <h3></h3>
+      <div id="b1">
+        <a routerLink="../page13"
+            style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+        <b id="b2"
+            style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">14</b>
+        <a routerLink="../page15"
+            style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+    </div>
+    </form>
+  </div>
+</body>
+
+</html>

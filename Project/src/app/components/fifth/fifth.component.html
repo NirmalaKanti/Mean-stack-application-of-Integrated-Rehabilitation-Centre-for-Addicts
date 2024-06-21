@@ -1,0 +1,203 @@
+
+<style>
+  body {
+          width: 100%;
+          font-size: 16px;
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+       }
+
+  .id1 {
+          border: double 6px rgb(66, 64, 64);
+           outline: solid 2px rgb(68, 64, 64);
+           margin: 40px;
+           min-height: 60vh;
+           padding-left: 20px;
+           padding-right: 20px;
+           box-sizing: border-box; 
+      }
+  
+      #b1 a{
+          position: relative;
+          left: 48%;
+          text-decoration: none;
+          border: 2px double rgb(100, 97, 97);
+          border-radius: 3px;
+          padding-left: 9px;
+          padding-right: 9px;
+        }
+
+        #b1 #b2{
+          position: relative;
+          left: 48%;
+          text-decoration: none;
+          border: 2px double rgb(100, 97, 97);
+          border-radius: 3px;
+          padding-left: 9px;
+          padding-right: 9px;
+       } 
+ 
+  #p1 input[type="text"] {
+      border: none;
+        overflow: hidden;
+        border-bottom: 2px dotted;
+        outline:none;
+        font-size: 12px;
+        
+       }
+
+   #p2 input[type="text"] {
+      border: none;
+        overflow: hidden;
+        border-bottom: 2px dotted;
+        outline:none;
+        font-size: 12px;
+
+       }
+
+   #p2{
+      font-size: 17px;
+      padding-right: 17.5px;
+  } 
+  #nk{
+          border: none;
+          outline: none;
+          font-size: 15px;
+      }
+
+  hr {
+           border:1.8px solid  black;
+        
+       }
+
+       input[type="text"] {
+      border: none;
+        overflow: hidden;
+        outline:none;
+        font-size: 16px;
+       }
+
+ 
+
+.form-input {
+width: 20%;
+/* Add other styles for the file input if needed */
+} 
+
+</style>
+<body>
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+
+  <div class="id1">
+
+      <div id="p1">
+          <p>I agree to identify and absolve the treatment center for the following situations<br>
+          a.&ensp;Sustaining injury / fatal or otherwise while trying to escape from the center / trying to procure Drugs<br>
+          b.&ensp;Attempting to commit suicide<br>
+          c.&ensp;During withdrawal,leading to DT and becoming violent or suicidal<br>
+          d.&ensp;Consuming Alcohol with Disulfiram and developing fatal reactions<br>
+          e.&ensp;Developing unexpected side effects or rare complications while taking medicine for withdrawal /despression /psychiatric problems / opportunistic infections due to HIV.
+         </p>
+      </div>
+         <p><b>Specially Note:</b>&ensp;<br>
+         <b style="font-size: 13px;">ವಿಶೇಷ ಸೂಚನೆ:</b>&ensp;<br>
+          <textarea name="SpecialNoteವಿಶೇಷಸೂಚನೆ" formControlName="SpecialNoteವಿಶೇಷಸೂಚನೆ" style="width: 100%; " id="nk" cols="30" rows="10"></textarea>
+         
+          <input type="file" [hidden]="hideChoose5" (change)="selectFile5($event)" style="padding-left: 16%;">
+          <div class="image-wrapper">
+            <img [src]="url5" [hidden] = "hideButton5" alt="Selected image" style="padding-left: 16%;">
+            <button [hidden]="hideButton5"(click)="removeImage5()">×</button>
+          </div>
+          
+          <p><b>Name </b><input type="text" name="name" formControlName="name" maxlength="25" pattern="[A-Za-z ]*"
+            onkeydown="return /[a-zA-Z ]/i.test(event.key)">
+          <b>Sign</b><input type="text"  maxlength="23">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+          <b>Mobile No: </b><input type="text" name="MobileNo" formControlName="MobileNo" maxlength="10" pattern="[0-9]*"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+         </p>
+      
+      <div id="p2">
+          <p style="font-size: 13.7px; color: black"><b style="font-size: 17px;">7.</b>&ensp;<input type="text" name="ದಿನ" formControlName="ದಿನ"  maxlength="3">&ensp;&ensp;&ensp;&ensp;
+          ದಿನ&ensp;<input type="text" name="ತಿಂಗಳು" formControlName="ತಿಂಗಳು" maxlength="13">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ತಿಂಗಳ, 20<input type="text" name="ವರ್ಷ" formControlName="ವರ್ಷ"  maxlength="3">&ensp;&ensp;&ensp;&ensp;&ensp;ರಂದು ನೆರವೇರಿಸಿದ 'ಘೋಷಣೆ ಮತ್ತು ನಷ್ಟಪರಿಹಾರ' ದಲ್ಲಿ ನಾವು ಮಾಡಿದ ಎಲ್ಲ ಹೇಳಿಕೆಗಳು ಮತ್ತು ಘೋಷಣೆಗಳ ಬಗ್ಗೆ ನನಗೆ/ ನಮಗೆ ಅರಿವು ಇರುತ್ತದೆ. ಈ ಮೂಲಕ ನಾನು / ನಾವು ಅದನ್ನು ದೃಢೀಕರಿಸುತ್ತಿದ್ದೇನೆ /ವೆ. ಮತ್ತು ಸ್ವೀಕರಿಸುತ್ತಿದ್ದೇನೆ/ ವೆ. ಅಲ್ಲದೆ ನಾನು / ನಾವು ನೆರವೇರಿಸಿದ / ಭರ್ತಿ ಮಾಡಿದ ಎಲ್ಲಾ ಹೇಳಿಕೆಗಳ ಮತ್ತು ಘೋಷನೆಗಳ ಬಗ್ಗೆ ನನಗೆ / ನಮಗೆ ಅರಿವು ಇರುತ್ತದೆ. ನಾನು/ನಾವು ಈ ಮೂಲಕ ಆದನ್ನು ದೃಢೀಕರಿಸುತ್ತಿದ್ದೇನೆ/ವೆ ಮತ್ತು ಸ್ವೀಕರಿಸುತ್ತಿದ್ದೇನೆ/ವೆ.
+          <br>
+          <u style="font-size: 16px; text-decoration: none;">
+          I/We state that am/are aware of all the statements and declarations made by me/us in the Declaration-Cum-idemnity executed by me/us on<input type="text"  name="Date" formControlName="Date" maxlength="3">&ensp;&ensp;&ensp;&ensp;day of<input type="text"  name="Month" formControlName="Month" maxlength="11">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;20<input type="text" name="Year" formControlName="Year" maxlength="3">&ensp;&ensp;&ensp;&ensp;and
+          I/we hereby confirm and rectify the same. I/We further state that I am/are aware of all the statements, declarations and forms executed / filled in by 
+          me and I/We hereby confirm and rectify the same.</u>
+      </p>
+      <p style="font-size: 13.7px; color: black"><b style="font-size: 17px;">8.</b>&ensp;ನಾನು/ನಾವು ಈ ಘೋಷಣೆಯನ್ನು ಯಾವುದೇ ಬಲವಂತ, ಒತ್ತಾಯ ಅಥವಾ ಅನಗತ್ಯ ಪ್ರಭಾವಕ್ಕೆ ಒಳಗಾಗದೆ, ವಿಧಿಬದ್ದವಾಗಿ ಮತ್ತು ವಿಶ್ವಾಸಪೂರ್ವಕವಾಗಿ ಮಾಡುತ್ತಿದ್ದೇನೆ/ವೆ ಮತ್ತು ಮೇಲೆ ನಾನು / ನಾವು ಮಾಡಿದ ಹೇಳಿಕೆಗಳು ಹಾಗೂ ಘೋಷಣೆಗಳಿಗೆ ಪೂರ್ಣ ಜಾರಿ ಮತ್ತು ಪರಿಣಾಮಗಳನ್ನು ಕೊಡತಕ್ಕದ್ದು.
+       <br>
+          <u style="font-size: 16px; text-decoration: none;">
+          I/We make this declaration solemnly and sincerely without any force, coercion or undue influence and the full force and effect should be given to all the statement 
+          s and declarations made by me as herein above.
+      </u>
+      </p>
+
+      <p style="font-size: 16.3px;"><b>Solemnly declared at Hope Recovery Center, Belagavi.</b>
+          <br><br>          <h4><b>This</b> <input type="text" name="date" formControlName="date" maxlength="19" style="width: 100px;">
+        <b>day of</b><input type="text"  name="MonthYear" formControlName="MonthYear" maxlength="19" style="width: 90px;" >
+
+
+        <input type="file" [hidden]="hideChoose4" (change)="selectFile4($event)" style="padding-left: 22%;">
+        <div class="image-wrapper">
+          <img [src]="url4" [hidden] = "hideButton4" alt="Selected image" style="padding-left: 45%;">
+          <button [hidden]="hideButton4"(click)="removeImage4()">×</button>
+        </div>
+
+          <br><b style="position: relative; left:45% ;">Signature</b></h4>
+          
+          <h4><b>In the Presence of</b><br><br><b>Names : </b><br>
+          <br>1)<input type="text"  name="attenderName1" formControlName="attenderName1" maxlength="26" pattern="[A-Za-z ]*"
+          onkeydown="return /[a-zA-Z ]/i.test(event.key)">
+
+          <input type="file" [hidden]="hideChoose3" (change)="selectFile3($event)" style="padding-left: 30%;" >
+          <div class="image-wrapper">
+            <img [src]="url3" [hidden] = "hideButton3" alt="Selected image" style="padding-left: 45%;">
+            <button [hidden]="hideButton3"(click)="removeImage3()">×</button>
+          </div>
+          <br><b style="position: relative; left:45%">Signature</b>
+          </h4>
+
+         <h4>2)<input type="text"  name="attenderName2" formControlName="attenderName2" maxlength="26" pattern="[A-Za-z ]*"
+          onkeydown="return /[a-zA-Z ]/i.test(event.key)" >
+
+          <input type="file" [hidden]="hideChoose2" (change)="selectFile2($event)" style="padding-left: 30%;" >
+    <div class="image-wrapper">
+      <img [src]="url2" [hidden] = "hideButton2" alt="Selected image" style="padding-left: 45%;">
+      <button [hidden]="hideButton2"(click)="removeImage2()">×</button>
+    </div>
+          <br><b style="position: relative; left:45%">Signature</b>
+         </h4>
+
+      <br>
+     
+      <input type="file" [hidden]="hideChoose1" (change)="selectFile1($event)" style="padding-left: 43%;">
+    <div class="image-wrapper" >
+      <img [src]="url1" [hidden] = "hideButton1" alt="Selected image" style="padding-left: 45%;">
+      <button [hidden]="hideButton1"(click)="removeImage1()">×</button>
+    </div>
+
+      <br><b style="position: relative; left:42%">Signature of Staff</b>
+     
+      </div>
+
+    <hr>
+    <p><b style="position: relative; left: 14px; font-size: 14px;">ಸ್ವೀಕೃತಿ:</b>
+      <br><b style="position: relative; left: 23px; font-size: 14px;">"ಘೋಷಣೆ ಮತ್ತು ನಷ್ಟ ಪರಿಹಾರ' ಬಾಂಡವನ್ನು 'ಹೋಪ್' – ಅಮಲು ಚಿಕಿತ್ಸಾ ಹಾಗೂ ಪುನರ್ವಸತಿ ಕೇಂದ್ರ, ಬೆಳಗಾವಿ ಒದಗಿಸಿರುತ್ತದೆ."</b>
+    <br>
+    <b style="position: relative; left: 14px; font-size: 18px;">Acknowledgment</b>
+    <br>
+    <b style="position: relative; left: 14px; font-size: 18px;">*The declaration - cum - indemnity Bond has been provided by : Hope Recovery Center.</b>
+  </p>
+ 
+
+  <button type="submit" [disabled]="!formData.valid">Save</button>
+  <div id="b1">
+      <a routerLink="../fourth" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+       <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">5</b>
+      <a routerLink="../sixth" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+ </div>
+</div>
+</form>
+</body>

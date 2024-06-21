@@ -1,0 +1,140 @@
+
+<body>
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <label>
+            <h3>3. Causative factors: </h3>
+            <input type="text" name="causefactor_22" formControlName="causefactor_22" style="border: 1px solid black;">
+        </label>
+        <fieldset>
+            <h3>4. Experience of: </h3>
+            <label>
+                <table style="border: 1px solid black;">
+                    <tr>
+                        <th style="width: 20%; border: none;">Blackout: </th>
+                        <td><input type="text" name="blackout_22" formControlName="blackout_22" type="[A-Za-z ]" style="border: none;" ></td>
+                    </tr>
+                    <tr>
+                        <th style="width: 20%;">Tolerence: </th>
+                        <td><input type="text" type="[A-Za-z ]" name="tolerence_22" formControlName="tolerence_22" style="border: none;"></td>
+                    </tr>
+                </table>
+            </label>
+        </fieldset>
+        <fieldset>
+            <h3>5. Behaviourial changes after consuming alcohol/drugs</h3>
+            <section style="margin-left: 20px;">
+                <label for="behaviourChange"><input type="checkbox" name="behaviour1_22" formControlName="behaviour1_22"
+                        id="behaviourChange" class="inline" value="Violent" />Violent</label><br>
+                <label for="behaviourChange"><input type="checkbox" name="behaviour2_22" formControlName="behaviour2_22"
+                        id="behaviourChange" class="inline" value="More_talkative" />More talkative</label><br>
+                <label for="behaviourChange"><input type="checkbox" name="behaviour3_22" formControlName="behaviour3_22"
+                        id="behaviourChange" class="inline" value="Angry" />Angry</label><br>
+                <label for="behaviourChange"><input type="checkbox" name="behaviour4_22" formControlName="behaviour4_22"
+                        id="behaviourChange" class="inline" value="Depressed" />Depressed</label><br>
+                <label for="behaviourChange"><input type="checkbox" name="behaviour5_22" formControlName="behaviour5_22"
+                        id="behaviourChange" class="inline" value="Sleepy" />Sleepy</label><br>
+                <label for="behaviourChange"><input type="checkbox" name="behaviour6_22" formControlName="behaviour6_22"
+                        id="behaviourChange" class="inline" value="Grandiosity" />Grandiosity</label><br>
+            </section>
+        </fieldset>
+
+
+        <!-- 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+        <h2>II. Childhood and adolescent history</h2>
+        <fieldset>
+            <label>
+                <h3>6. How would you describe your childhood/teenage years?</h3>
+                <input type="text" name="childhood_22" formControlName="childhood_22" style="border: 1px solid black;">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <!-- id = present/absent to be added to each situation -->
+            <h3>7. Did you experience the following before the age of 15 years?</h3>
+            <table style="width: 50%;">
+                <tr>
+                    <th style="width: 50%;">Situations</th>
+                    <th>Present</th>
+                    <th>Absent</th>
+                </tr>
+
+                <tr>
+                    <td>Poverty/severe debts of parents</td>
+                    <td><input type="radio" name="exp15_1" formControlName="exp15_1"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_1" formControlName="exp15_1"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Early parental loss</td>
+                    <td><input type="radio" name="exp15_2" formControlName="exp15_2"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_2" formControlName="exp15_2"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Extra marital affairs of parents</td>
+                    <td><input type="radio" name="exp15_3" formControlName="exp15_3"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_3" formControlName="exp15_3"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Broken home / single parenting</td>
+                    <td><input type="radio" name="exp15_4" formControlName="exp15_4"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_4" formControlName="exp15_4"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Violence</td>
+                    <td><input type="radio" name="exp15_5" formControlName="exp15_5"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_5" formControlName="exp15_5"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Sexually abused by others</td>
+                    <td><input type="radio" name="exp15_6" formControlName="exp15_6"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_6" formControlName="exp15_6"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>None</td>
+                    <td><input type="radio" name="exp15_7" formControlName="exp15_7"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_7" formControlName="exp15_7"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+
+                <tr>
+                    <td>Any other</td>
+                    <td><input type="radio" name="exp15_8" formControlName="exp15_8"
+                            style="width: unset; vertical-align: middle;" value="present" /></td>
+                    <td><input type="radio" name="exp15_8" formControlName="exp15_8"
+                            style="width: unset; vertical-align: middle;" value="absent" /></td>
+                </tr>
+            </table>
+        </fieldset>
+        <div>
+            <button type="submit" [disabled]="!formData.valid">Save</button>
+        </div>
+        <h3></h3>
+        <div id="b1">
+            <a routerLink="../page21"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>P</b></a>
+            <b id="b2"
+                style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">22</b>
+            <a routerLink="../page23"
+                style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a>
+        </div>
+    </form>
+</body>
+<router-outlet></router-outlet>

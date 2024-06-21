@@ -1,0 +1,106 @@
+<style>
+  body {
+      width: 100%;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
+  
+#id1 {
+      border: double 6px rgb(66, 64, 64);
+       outline: solid 2px rgb(68, 64, 64);
+       margin: 45px;
+       min-height: 60vh;
+       padding-left: 30px;
+       padding-right: 20px;
+       padding-right:3px;
+       box-sizing: border-box; 
+  }
+
+@media screen and (min-width:100%) {
+body {
+max-width: 1000px;
+margin: 0 auto;
+}
+} 
+
+#b1 a{
+     position: relative;
+      left: 47%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+
+    #b1 #b2{
+      position: relative;
+      left: 47%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+   } 
+
+
+#h3
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+input[type="text"]
+{
+    border: none;
+    overflow: hidden;
+    border-bottom: 2px dotted;
+    outline:none;
+    font-size: 12px;
+}
+
+#e1{
+    font-size: 16px;
+}
+#p3{
+  /* text-align: center; */
+    text-align: justify;
+    text-justify: inter-character;
+}
+</style>
+
+<body>
+   
+
+  <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <div id="id1">
+      <h1>PSYCHIATRIC HISTORY</h1>
+        
+      <label for="name">Name:</label>
+<input type="text" pattern="[A-Za-z]*" onkeydown="return /[a-zA-Z]/.test(event.key)" id="fourthname" formControlName="name_12" />&nbsp;
+          <label for="age">Age:</label>
+<input type="number" id="age" formControlName="age_12" /> &nbsp;
+                <label for="dateofad">Date of Admission:</label>
+<input type="date" id="dateofad" formControlName="dateofad_12" />
+<h3>1. History of Alcoholism/Substance abuse</h3>    <input type="text" id="his" formControlName="hist_12" /> 
+<h3>2. Physical Complications</h3>         <input type="text" id="phy" formControlName="Physical_12" /> 
+<h3>3. Past History</h3>       <input type="text" id="past" formControlName="past_hist_12" /> 
+<h3>4. Psychiatric Problems</h3>     <input type="text" id="psyc" formControlName="psyc_prob_12" /> 
+<h3>5. Withdrawal Symptoms</h3>     <input type="text" id="with" formControlName="withdrawal_symp_12" /> 
+<h3>6. Treatment</h3>     <input type="text" id="tre" formControlName="treat_12" /> 
+  <br>
+<br>
+
+<button type="submit">Save</button>
+<div id="b1">
+  <a routerLink="../page11" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+   <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">12</b>
+  <a routerLink="../page13" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+</div>
+</div>
+</form>
+</body>

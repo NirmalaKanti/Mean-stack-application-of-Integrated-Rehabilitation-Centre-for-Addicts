@@ -1,0 +1,291 @@
+<style>
+  body {
+           width: 100%;
+           font-size: 16px;
+           margin: 0;
+           padding: 0;
+           overflow-x: hidden;
+        }
+ 
+   .id1 {
+           border: double 6px rgb(66, 64, 64);
+            outline: solid 2px rgb(68, 64, 64);
+            margin: 40px;
+            min-height: 60vh;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box; 
+       }
+       
+     .table-container {
+     overflow-x: auto;
+     max-width: 100%;
+    }
+     #p1 input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+     }
+     table {
+       width: 100%;
+       border: 1px solid black;
+       border-collapse: collapse;
+       border-spacing: 5px; 
+     }
+   
+     th,td {
+        padding: 8px;
+       text-align:left;
+       width:10%; 
+     }
+     table, th, td 
+       {
+          border: 1px solid black;
+          width:70%;
+       }
+     td input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+     }
+     .form-input {
+       width: 0%;
+       padding: 0.5px;
+       margin-left: 20px;
+       border: 0.5px solid #fff8f8;
+       outline: none;
+       border-radius: 5px;
+       margin-bottom: 100px;
+     }
+   
+     hr {
+       border-color: black;
+       margin-bottom: 20%;
+     }
+   
+     #p2 input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+     }
+   
+     #p2 p input[type="text"] {
+       border: none;
+       background: none;
+       outline: none;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       position: absolute;
+       width: 70%;
+     }
+   
+     #nk {
+       border: none;
+       outline: none;
+       font-size: 15px;
+     }
+   
+     #b1 a {
+       position: relative;
+       left: 48%;
+       text-decoration: none;
+       border: 2px double rgb(100, 97, 97);
+       border-radius: 3px;
+       padding-left: 9px;
+       padding-right: 9px;
+     }
+     #b1 #b2 {
+       position: relative;
+       left: 48%;
+       text-decoration: none;
+       border: 2px double rgb(100, 97, 97);
+       border-radius: 3px;
+       padding-left: 9px;
+       padding-right: 9px;
+     }
+   
+     .image-container {
+       position: relative;
+       display: inline-block;
+       margin-top: 10px;
+       left: 69%;
+     }
+     .remove-button { 
+       position: absolute;
+       top: 2px;
+       right: 2px;
+       cursor: pointer;
+       color: rgb(219, 34, 34);
+       font-weight: bold;
+       font-size: 14px;
+       background: rgb(209, 83, 83);
+       border-radius: 50%;
+       opacity: 0; 
+       transition: opacity 0.3s;
+     }
+     .remove-button:hover {
+       opacity: 1;
+     }
+     .form-input {
+       width: 20%;
+     }
+     div {
+   column-gap: 10px;
+ }
+   </style>
+   <body>
+     <div class="id1">
+       <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+         <p>38. Have you got into trouble with law for the following:&nbsp;&nbsp;&nbsp; Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</p>
+         <p>Arrested for drunken/Drug influenced behaviour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="law" formControlName="law_28" style="border:black;" name="law_28" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="law1" formControlName="law_28" name="law_28" value="No"></p>
+         <p>Fined for drunken driving&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="law1" formControlName="law1_28" style="border:black; " name="law1_28" value="yes" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="law3" formControlName="law1_28" name="law1_28" value="No"></p>
+         <p>Had an accident(even minor) while driving <br>under the influence of Alcohol/Drugs</p>
+         <p>Assault</p>
+         <p>Any other<br><input type="text" id="other" formControlName="other_28" style="width:100%; border:none; padding:50px;"> </p>
+         <br><br>
+         <p><b>IX. Leisure time activities</b></p>
+         <div class="table-container">
+         <table class="w-full text-left">
+           <thead>
+             <tr>
+               <th class="pb-1 border-b-1">39. Activities:</th>
+               <th class="pb-1 border-b-1">Before addiction</th>
+               <th class="pb-1 border-b-1">in the last one year</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>Playing Games,</td>
+               <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z81" formControlName="game_28" style="width: 100%; border: black"></div></td>
+               <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z82" formControlName="game1_28" style="width: 100%; border: black"></div></td>
+             </tr>
+             <tr>
+                 <td>Physical exercises</td>
+                 <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z83" formControlName="exercise_28" style="width: 100%; border: black"></div></td>
+                 <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z84" formControlName="exercise1_28" style="width: 100%; border: black"></div></td>
+               </tr>
+               <tr>
+                 <td>Going to movies, dramas</td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z85" formControlName="movie_28" style="width: 100%; border: black"></div></td>
+                 <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z86" formControlName="movie1_28" style="width: 100%; border: black"></div></td>
+               </tr>
+               <tr>
+                 <td>Watching TV/video, listening to music</td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z87" formControlName="tv_28"></div></td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z88" formControlName="tv1_28"></div></td>
+               </tr>
+               <tr>
+                 <td>Reading</td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z89" formControlName="reading_28"></div></td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z90" formControlName="reading1_28"></div></td>
+               </tr>
+               <tr>
+                 <td>Visiting relatives/friends</td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z91" formControlName="frds_28"></div></td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z92" formControlName="frds1_28"></div></td>
+               </tr>
+               <tr>
+                 <td>Other hobbies/talents</td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z93" formControlName="hobby_28"></div></td>
+                 <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z94" formControlName="hobby1_28"></div></td>
+               </tr>
+           </tbody>
+         </table>
+       </div>
+       <p><b>X. Religious beliefs</b><input type="text" id="z95" formControlName="belief_28" style="width:200px; border:none;"/> </p>
+               <div class="table-container">
+               <table class="w-full text-left">
+                 <thead>
+                     <tr>
+                         <td>40. Are you a believer</td>
+                         <td></td>
+                         <td>Yes</td>
+                         <td>No</td>
+                       </tr>
+                       <tr>
+                         <td>Indifferent</td>
+                         <td></td>
+                         <td>Yes</td>
+                         <td>No</td>
+                       </tr>
+                       <tr>
+                         <td>Do you</td>
+                         <td>Always</td>
+                         <td>Sometimes</td>
+                         <td>Never</td>
+                       </tr>
+                       <tr>
+                         <td>Visit temple regularly</td>
+                         <td><input type="radio" id="temple1" formControlName="temple1_28" style="width:10px; border:none;" name="temple1_28" value="always"></td>
+                         <td><input type="radio" id="temple2" formControlName="temple1_28" style="width:10px; border:none;" name="temple1_28" value="sometimes"></td>
+                         <td><input type="radio" id="temple3" formControlName="temple1_28" style="width:10px; border:none;" name="temple1_28" value="never"></td>
+                       </tr>
+                       <tr>
+                         <td>Go on pilgrimages</td>
+                         <td><input type="radio" id="pilgrimage1" formControlName="pilgrimage1_28" style="width:10px; border:none;" name="pilgrimage1_28" value="always"></td>
+                         <td><input type="radio" id="pilgrimage1" formControlName="pilgrimage1_28" style="width:10px; border:none;" name="pilgrimage1_28" value="sometimes"></td>
+                         <td><input type="radio" id="pilgrimage1" formControlName="pilgrimage1_28" style="width:10px; border:none;" name="pilgrimage1_28" value="never"></td>
+                       </tr>
+                       <tr>
+                         <td>Celebrate festivals</td>
+                         <td><input type="radio" id="festival1" formControlName="festival1_28" style="width:10px; border:none;" name="festival1_28" value="always"></td>
+                         <td><input type="radio" id="festival1" formControlName="festival1_28" style="width:10px; border:none;" name="festival1_28" value="sometimes"></td>
+                         <td><input type="radio" id="festival1" formControlName="festival1_28" style="width:10px; border:none;" name="festival1_28" value="never"></td>
+                       </tr>
+                 </thead>
+                 
+               </table>
+             </div>
+             <br>
+     <button type="submit" [disabled]="!formData.valid">Save</button>
+         <div id="b1">
+           <a
+             routerLink="../page27"
+             style="
+               text-decoration: none;
+               color: black;
+               background-color: rgb(255, 252, 252);
+               display: inline-block;
+               vertical-align: top;
+             "
+             ><b>P</b></a
+           >
+           <b
+             id="b2"
+             style="
+               text-decoration: none;
+               color: black;
+               background-color: rgb(243, 237, 237);
+               display: inline-block;
+               vertical-align: top;
+             "
+             >28</b>
+           <a
+             [routerLink]="[
+               '../page29',
+               { addictName: formData.get('addictname')?.value }
+             ]"
+             style="
+               text-decoration: none;
+               color: black;
+               background-color: rgb(255, 252, 252);
+               display: inline-block;
+               vertical-align: top;
+             "
+             ><b>N</b></a
+           >
+         </div>
+       </form>
+     </div>
+   </body>

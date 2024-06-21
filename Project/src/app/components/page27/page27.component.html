@@ -1,0 +1,164 @@
+
+<body>
+  <div class="id1">
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+      <p>28. How long have you been working?<input type="text" id="work" formControlName="work_27" style="width:200px; border:none;"/></p>
+      <p>29. Have you received any special award, recognition, merit certificates or promotions in the past?<input type="text" id="award" formControlName="award_27" style="width:200px; border:none;"/></p>
+      <p>30. Did you change your job frequently due to addiction?&nbsp;&nbsp;Yes<input type="radio" name="job" formControlName="job_addict_27" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;No<input type="radio" name="job" formControlName="job_addict_27" value="No"></p>
+      <p>31. Did you have any periods of unemployment?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If yes, for how long and for what reasons?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes<input type="radio" id="unemployment" formControlName="unemployment_27" name="unemployment" value="yes">&nbsp;&nbsp;&nbsp;&nbsp;No<input type="radio" id="jobs1" formControlName="unemployment_27" name="unemployment" value="No"></p>
+      <p>32. Occupational damage</p>
+      <div class="table-container">
+      <table class="w-full text-left">
+        <thead>
+          <tr>
+            <th class="pb-1 border-b-1">Absenteeism:</th>
+            <th class="pb-1 border-b-1">Yes/No</th>
+            <th class="pb-1 border-b-1">Loss of pay</th>
+            <th class="pb-1 border-b-1">Yes/No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Warning/memos</td>
+            <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z59" formControlName="yes_no_27" style="width: 100%; border: black"></div></td>
+            <td><div class="border px-2 py-2" contenteditable="true"></div>Accidents on the Job</td>
+            <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z60" formControlName="yes_no1_27" style="width: 100%; border: black"></div></td>
+          </tr>
+          <tr>
+              <td>Suspension order</td>
+              <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z61" formControlName="yes_no2_27" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="true"></div>Attend work under the influence</td>
+              <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z62" formControlName="yes_no3_27" style="width: 100%; border: black"></div></td>
+            </tr>
+            <tr>
+              <td>Dismissal Order</td>
+              <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z63" formControlName="yes_no4_27" style="width: 100%; border: black"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>of Alcohol/Drugs</td>
+              <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z64" formControlName="yes_no5_27" style="width: 100%; border: black"></div></td>
+            </tr>
+            <tr>
+              <td>Transfer Order</td>
+              <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z65" formControlName="yes_no6_27"></div></td>
+              <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z66" formControlName="yes_no7_27"></div></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>33. Specify nature of current work:<input type="text" id="cwork" formControlName="cwork_27" style="width:200px; border:none;"/> </p>
+    <p>34. Occupational damage as perceived by the counsellor:&nbsp;&nbsp;&nbsp;&nbsp;Mild<input type="radio" id="mild" formControlName="mild_27" value="mild">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderate<input type="radio" id="moderate" formControlName="mild" name="mild" value="moderate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Severe<input type="radio" id="severe" formControlname="mild" name="mild" value="severe"></p>
+
+    <p><b>VII. Financial History</b></p>
+
+            <div class="table-container">
+            <table class="w-full text-left">
+              <thead>
+                  <tr>
+                      <td><b>35. Details of debts to be cleared:</b></td>
+                      <td><b>Amount:</b></td>
+                    </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="border px-4 py-2" contenteditable="true">Money borrowed from family and friends</div></td>
+                  <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z67" formControlName="money_fam_27" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr>
+                    <td><div class="border px-4 py-2" contenteditable="true">Loans from banks</div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z68" formControlName="loan_bank_27" style="width: 100%; border: black"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="border px-4 py-2" contenteditable="true">Loans from place of work</div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z69" formControlName="loan_work_27" style="width: 100%; border: black"></div></td>
+                  </tr>
+                    <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">Money borrowed from money lenders</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z71" formControlName="money_lender_27" style="width: 100%; border: black"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">Money for redeeming articles from pawn shops</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z72" formControlName="money_article_27" style="width: 100%; border: black"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">Outstanding debts at various shops</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z73" formControlName="out_debt_27" style="width: 100%; border: black"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">None</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z74" formControlName="none_27" style="width: 100%; border: black"></div></td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>36. Financial damage as percieved by counsellor: &nbsp;&nbsp;&nbsp;&nbsp;Mild<input type="radio" id="mild" formControlName="mild1_27" value="mild">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderate<input type="radio" id="moderate" formControlName="mild1" name="mild1" value="moderate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Severe<input type="radio" id="severe" formControlname="mild1" name="mild1" value="severe"></p>
+          <p><b>VIII. Legal History</b></p>
+          <p>37. Have you been arrested for sale of Drug</p>
+          <div class="table-container">
+              <table class="w-full text-left">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Yes</td>
+                        <td>No</td>
+                      </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="border px-4 py-2" contenteditable="true">If yes, no. of times</div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="z75" formControlName="time_27" style="border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="z76" formControlName="time1_27" style=" border: black"></div></td>
+                  </tr>
+                  <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">Have you been arrested for possession of drugs?</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z77" formControlName="drugs_27" style="border: black"></div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="z78" formControlName="drugs1_27" style=" border: black"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="border px-4 py-2" contenteditable="true">If yes, no. of times</div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="z79" formControlName="time2_27" style=" border: black"></div></td>
+                      <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="z80" formControlName="time3_27" style="border: black"></div></td>
+                    </tr>
+                </tbody>
+              </table>
+              </div>
+              <br>
+  <button type="submit" [disabled]="!formData.valid">Save</button>
+      <div id="b1">
+        <a
+          routerLink="../page26"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>P</b></a
+        >
+        <b
+          id="b2"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(243, 237, 237);
+            display: inline-block;
+            vertical-align: top;
+          "
+          >27</b>
+        <a
+          [routerLink]="[
+            '../page28',
+            { addictName: formData.get('addictname')?.value }
+          ]"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>N</b></a
+        >
+      </div>
+    </form>
+  </div>
+</body>

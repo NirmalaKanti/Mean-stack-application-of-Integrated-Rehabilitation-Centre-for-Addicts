@@ -1,0 +1,95 @@
+<style>
+    body {
+        /* background-color: #f2d1d1; Dark background color */
+        color: #040404; /* White text color */
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #444; /* Darker background color */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    label, h2, a {
+        color: #fff; /* White text color for labels, headings, and links */
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        background-color: #555; /* Dark background color for inputs */
+        border: 1px solid #777;
+        color: #fff; /* White text color for inputs */
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #222; /* Darker background color for the button */
+        color: #fff; /* White text color for the button */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #111; /* Dark background color on hover */
+    }
+
+    h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    h1 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    a {
+        color: #fff; /* White text color for links */
+        text-decoration: none;
+        border:1px solid white;
+        width: fit-content;
+        align-items: center;
+        text-align: center;
+        margin-left: 90px;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <h1>IRCA-Integrated Rehabilitation Centre for Addicts</h1>
+<form>
+    <div align="center">
+        <label for="username">USERNAME:</label>
+        <input type="text" name="username" [(ngModel)]="username">
+    </div><br>
+    <div align="center">
+        <label for="password">PASSWORD:</label>
+        <input type="password" name="password" [(ngModel)]="password">
+    </div><br>
+    <div align="center">
+        <button (click)="check()">Login</button>
+    </div><br>
+    <div *ngIf="ischecked">
+        <div *ngIf="isvalidate">
+            <!-- <h2>Welcome {{username}}! You are successfully logged in.</h2> -->
+            <!-- <a href="/display"></a> -->
+            <!-- <a routerLink="/nexthome">Click to Continue</a> -->
+        </div>
+        <div *ngIf="!isvalidate">
+            <h2>Invalid username or password. Please try again.</h2>
+            <a routerLink="/login">Click to Re-enter</a>
+        </div>
+    </div>
+    </form>
+    </body>

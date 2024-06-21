@@ -1,0 +1,243 @@
+<style>
+  body {
+         width: 100%;
+         font-size: 16px;
+         margin: 0;
+         padding: 0;
+         overflow-x: hidden;
+      }
+
+ .id1 {
+         border: double 6px rgb(66, 64, 64);
+          outline: solid 2px rgb(68, 64, 64);
+          margin: 40px;
+          min-height: 60vh;
+          padding-left: 20px;
+          padding-right: 20px;
+          box-sizing: border-box; 
+     }
+     
+   .table-container {
+   overflow-x: auto;
+   max-width: 100%;
+  }
+   #p1 input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+   }
+   table {
+     width: 100%;
+     border: 1px solid black;
+     border-collapse: collapse;
+     border-spacing: 5px; 
+   }
+ 
+   th,td {
+      padding: 8px;
+     text-align:left;
+     width:10%; 
+   }
+   table, th, td 
+     {
+        border: 1px solid black;
+        width:70%;
+     }
+   td input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+   }
+   .form-input {
+     width: 0%;
+     padding: 0.5px;
+     margin-left: 20px;
+     border: 0.5px solid #fff8f8;
+     outline: none;
+     border-radius: 5px;
+     margin-bottom: 100px;
+   }
+ 
+   hr {
+     border-color: black;
+     margin-bottom: 20%;
+   }
+ 
+   #p2 input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+     /* width: 70%;*/
+   }
+ 
+   #p2 p input[type="text"] {
+     border: none;
+     background: none;
+     outline: none;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     position: absolute;
+     width: 70%;
+   }
+ 
+   #nk {
+     border: none;
+     outline: none;
+     font-size: 15px;
+   }
+ 
+   #b1 a {
+     position: relative;
+     left: 48%;
+     text-decoration: none;
+     border: 2px double rgb(100, 97, 97);
+     border-radius: 3px;
+     padding-left: 9px;
+     padding-right: 9px;
+   }
+   #b1 #b2 {
+     position: relative;
+     left: 48%;
+     text-decoration: none;
+     border: 2px double rgb(100, 97, 97);
+     border-radius: 3px;
+     padding-left: 9px;
+     padding-right: 9px;
+   }
+ 
+   .image-container {
+     position: relative;
+     display: inline-block;
+     margin-top: 10px;
+     left: 69%;
+   }
+   .remove-button { 
+     position: absolute;
+     top: 2px;
+     right: 2px;
+     cursor: pointer;
+     color: rgb(219, 34, 34);
+     font-weight: bold;
+     font-size: 14px;
+     background: rgb(209, 83, 83);
+     border-radius: 50%;
+     opacity: 0; 
+     transition: opacity 0.3s;
+   }
+   .remove-button:hover {
+     opacity: 1;
+   }
+   .form-input {
+     width: 20%;
+   }
+   div {
+ column-gap: 10px;
+}
+ </style>
+ <body>
+   <div class="id1">
+     <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+       <p><b>X. Referral - medical as well as other referrals</b></p>
+       <p>Date and details of visits<input type="text" id="visit" formControlName="visit_29" style="width:50%; border:black; padding:20px;"></p>
+       <p>Referral to:<input type="text" id="ref" formControlName="referral_29" style="width:50%; border:black; padding:3px;"></p>
+       <p>Action taken:<input type="text" id="at" formControlName="action_29" style="width:50%; border:black; padding:3px;"></p>
+       <p>If referred, name of organization:<input type="text" id="name_org_29" formControlName="name_org_29" style="width:50%; border:black; padding:6px;"></p>
+       <br><br>
+       <p><b>XII. Treatment plan</b></p>
+       <div class="table-container">
+       <table class="w-full text-left">
+         <thead>
+           <tr>
+             <th class="pb-1 border-b-1">Goals-Short-term and long-term</th>
+             <th class="pb-1 border-b-1">Specific activities to be undertaken</th>
+             <th class="pb-1 border-b-1">Time frame</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>Abstaining from Alcohol and Drugs</td>
+             <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z96" formControlName="Abstaining_29" style="width: 100%; border: black"></div></td>
+             <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z97" formControlName="Abstaining1_29" style="width: 100%; border: black"></div></td>
+           </tr>
+           <tr>
+               <td>Getting back to routine life</td>
+               <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="z98" formControlName="rout_life_29" style="width: 100%; border: black"></div></td>
+               <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z99" formControlName="rout_life1_29" style="width: 100%; border: black"></div></td>
+             </tr>
+             <tr>
+               <td>Improvement in work life</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z100" formControlName="improve_29" style="width: 100%; border: black"></div></td>
+               <td><div class="border px-2 py-2" contenteditable="true"><input type="text" id="z101" formControlName="improve1_29" style="width: 100%; border: black"></div></td>
+             </tr>
+             <tr>
+               <td>Managing finances</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z102" formControlName="finances_29"></div></td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z103" formControlName="finances1_29"></div></td>
+             </tr>
+             <tr>
+               <td>Dealing with defects of character</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z104" formControlName="defect_29"></div></td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z105" formControlName="defect1_29"></div></td>
+             </tr>
+             <tr>
+               <td>Improving relationship with the family involvement in healthy recreational activities</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z106" formControlName="recreation_29"></div></td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z107" formControlName="recreation1_29"></div></td>
+             </tr>
+             <tr>
+               <td>Follow - up measures</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z108" formControlName="measures_29"></div></td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z109" formControlName="measures1_29"></div></td>
+             </tr>
+             <tr>
+               <td>Dealing with relapses if any</td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z110" formControlName="relapse_29"></div></td>
+               <td><div class="border px-4 py-2" contenteditable="false"><input type="text" id="z111" formControlName="relapse1_29"></div></td>
+             </tr>
+         </tbody>
+       </table>
+     </div>
+     <p><b>XIII. In case of drop out or extension of stay</b></p>
+     <p>In case of drop out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date:<input type="date" id="drop" formControlName="date_drop_29" style="width:10%; border:none;"/></p>
+     <p>Reasons for drop out:<br>
+         <input type="radio" formControlName="lackofmotivation_29" name="lackofmotivation_29" value="lackofmotivation">Lack Of Motivation<br>
+         <input type="radio" formControlName="familysupport_29" name="familysupport_29" value="familysupport">Family Support<br>
+         <input type="radio" formControlName="poverty_29" name="poverty_29" value="poverty">Poverty, hence not able to stay<br>
+         <input type="radio" formControlName="legalproblem_29" name="legalproblem_29" value="legalproblem">Legal Problem<br>
+         <input type="radio" formControlName="unabletocope_29" name="unabletocope_29" value="unabletocope">Unable to cope with treatment<br>
+         <input type="radio" formControlName="inadequatefacilities_29" name="inadequatefacilities_29" value="inadequatefacilities">Inadequate Facilities<br>
+         <input type="radio" formControlName="anyother_29" name="anyother_29" value="anyother">Any Other<br></p>
+       <p>In case of extension:<input type="text" id="extn" formControlName="extn_29" style="width:50%; border:none; padding:4px;" /></p>
+       <p>Reasons for extension:<input type="text" id="reason" formControlName="reason_29" style="width:50%; border:none; padding:4px;" /></p>
+   <button type="submit" [disabled]="!formData.valid">Save</button>
+       <div id="b1">
+         <a
+           routerLink="../page28"
+           style="
+             text-decoration: none;
+             color: black;
+             background-color: rgb(255, 252, 252);
+             display: inline-block;
+             vertical-align: top;
+           "
+           ><b>P</b></a
+         >
+         <b id="b2"style="text-decoration: none;color: black;background-color: rgb(243, 237, 237);display: inline-block;vertical-align: top;">29</b>
+         <!-- <b>N</b></a> -->
+         <button (click)="totalsubmit()" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top; margin-left: 80%;">SUBMIT</button>
+
+       </div>
+     </form>
+   </div>
+ </body>

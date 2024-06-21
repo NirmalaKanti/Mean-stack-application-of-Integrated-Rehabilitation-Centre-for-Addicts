@@ -1,0 +1,124 @@
+<style>
+  body {
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+     }
+
+h1 {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+p {
+  font-size: 19px;
+}
+
+.signature {
+  text-align: right;
+  font-size: 12px;
+}
+#main_body{
+         border: double 6px rgb(66, 64, 64);
+         outline: solid 2px rgb(68, 64, 64);
+          margin: 50px;
+          margin-top:40px;
+          position: relative; 
+         padding-left: 30px;
+            
+
+}
+
+input[type="text"]
+  {
+      border: none;
+      overflow: hidden;
+      border-bottom: 2px dotted;
+      outline:none;
+      font-size: 12px;
+  }
+
+  #b1 a{
+        position: relative;
+        left: 48%;
+        text-decoration: none;
+        border: 2px double rgb(100, 97, 97);
+        border-radius: 3px;
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+
+      #b1 #b2{
+        position: relative;
+        left: 48%;
+        text-decoration: none;
+        border: 2px double rgb(100, 97, 97);
+        border-radius: 3px;
+        padding-left: 9px;
+        padding-right: 9px;
+     } 
+
+</style>
+
+<body >
+<form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+<div id="main_body">
+<div>
+  <u>
+    <h1 >ಡೈಸಲ್ಟಿರಮ್ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಬಗ್ಗೆ ಪತ್ರ</h1>
+  </u>
+    <br>
+    <br>
+    <p>ನನ್ನ ಮದ್ಯಪಾನ ರೋಗದ ಚಿಕಿತ್ಸೆಯ ಭಾಗವಾಗಿ ವೈದ್ಯರು ನಿರ್ದೇಶಿಸಿದ ಡೈಸಲಿರಮ್ ಎಂಬ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಳ್ಳುತ್ತೇನೆ. ಈ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವಾಗ ಮದ್ಯಪಾನ ತೆಗೆದುಕೊಂಡರೆ ಶಾರೀರಿಕವಾಗಿ ಹಾಗೂ ಮಾನಸಿಕವಾಗಿ ಉಂಟಾಗುವ ತೊಂದರೆಗಳ ಬಗ್ಗೆ ನನಗೆ ಅರಿವಿದೆ.</p>
+    <br>
+    <p>ಇದರಿಂದ ಉಂಟಾಗುವ ಪರಿಣಾಮಗಳಿಗೆ ನಾನೇ ಜವಾಬ್ದಾರನಾಗಿರುತ್ತೇನೆ.</p>
+    <br>
+   <br>
+   <br>
+   <input type="file" [hidden]="hideChoose1" (change)="selectFile1($event)" >
+    <div class="image-wrapper">
+      <img [src]="url1" [hidden] = "hideButton1" alt="Selected image">
+      <button [hidden]="hideButton1"(click)="removeImage1()">×</button>
+    </div>
+
+    <p><b>ಚಿಕಿತ್ಸಾರ್ಥಿಯ ಸಹಿ</b></p>
+</div>
+    
+    
+<div>
+  <u>
+    <h1>Letter for taking Disulfiram Tablets</h1>
+  </u>
+    <br>
+    <br>
+    <p>As a part of De-Addiction treatment Doctor has advised me to take Disulfiram tablets</p>
+    <p>During Disulfiram course if I consume Alcohol it may result in Medical or Psychological risk & consequences.</p>
+    <br><br>
+    <p>I am aware of it and i will take entire responsibility by myself</p>
+    <br>
+    <br>
+    <br>
+    
+    <input type="file" [hidden]="hideChoose2" (change)="selectFile2($event)" >
+    <div class="image-wrapper">
+      <img [src]="url2" [hidden] = "hideButton2" alt="Selected image">
+      <button [hidden]="hideButton2"(click)="removeImage2()">×</button>
+    </div>
+
+    <p><b>Patient Signature</b></p>
+</div>
+<br>
+<br>
+<button type="submit" [disabled]="!formData.valid">Save</button>
+<div id="b1">
+  <a routerLink="../fifth" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+   <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">6</b>
+  <a [routerLink]="['../seventh', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+</div>
+</div>
+</form>
+</body>

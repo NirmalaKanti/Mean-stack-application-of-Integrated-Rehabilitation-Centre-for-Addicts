@@ -1,0 +1,151 @@
+<style>
+  body {
+      width: 100%;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+   }
+  
+#id1 {
+      border: double 6px rgb(66, 64, 64);
+       outline: solid 2px rgb(68, 64, 64);
+       margin: 45px;
+       min-height: 60vh;
+       padding-left: 30px;
+       padding-right: 20px;
+       padding-right:3px;
+       box-sizing: border-box; 
+  }
+
+@media screen and (min-width:100%) {
+body {
+max-width: 1000px;
+margin: 0 auto;
+}
+} 
+
+#b1 a{
+     position: relative;
+      left: 47%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+
+
+    #b1 #b2{
+      position: relative;
+      left: 47%;
+      text-decoration: none;
+      border: 2px double rgb(100, 97, 97);
+      border-radius: 3px;
+      padding-left: 9px;
+      padding-right: 9px;
+   } 
+
+
+#h3
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+input[type="text"]
+{
+    border: none;
+    overflow: hidden;
+    border-bottom: 2px dotted;
+    outline:none;
+    font-size: 12px;
+}
+
+#e1{
+    font-size: 16px;
+}
+#p3{
+  /* text-align: center; */
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+</style>
+
+<body>
+   
+
+  <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <div id="id1">
+      
+        
+      <label for="name">Last drink/Drugs taken:</label>
+<input type="number" id="n1" formControlName="name_9" />&nbsp;<label>days ago.</label>
+          <p><b>Diagnosis:</b></p>
+          <p><b>Previous history:</b></p>
+<p>Withdrawal symptoms experienced when the patient stopped drinks/Drugs.</p>    
+<table>
+  <thead>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;<b>Alcohol</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>&nbsp;&nbsp;&nbsp;<b>Drugs</b>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <li><label><input type="checkbox" id="p1" formControlName="trem_9"> Tremors</label></li>
+        <li><label><input type="checkbox" id="p2" formControlName="inso_9"> Insomnia</label></li>
+        <li><label><input type="checkbox" id="p3" formControlName="fits_9"> Fits</label></li>
+        <li><label><input type="checkbox" id="p4" formControlName="ache_9"> Aches/Pains</label></li>
+        <li><label><input type="checkbox" id="p5" formControlName="hallu_9"> Hallucination</label></li>
+        <li><label><input type="checkbox" id="p6" formControlName="delli_9"> Dellirium</label></li>
+      </td>
+      <td>
+        <li><label><input type="checkbox" formControlName="drugtremor_9">Tremors</label></li>
+        <li><label><input type="checkbox" formControlName="druginsomnia_9">Insomnia</label></li>
+        <li><label><input type="checkbox" formControlName="drugdiarrhoea_9">Diarrhoea</label></li>
+        <li><label><input type="checkbox" formControlName="drugseverepain_9">Severe pain</label></li>
+        <li><label><input type="checkbox" formControlName="drugrestless_9">Restlessness</label></li>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><b>Other psychiatric complications</b></p>
+<td>
+  <li><label><input type="checkbox" id="p7" formControlName="depress_9"> Depression</label></li>
+  <li><label><input type="checkbox" id="p8" formControlName="sucid_9"> Sucidial ideation/attempts</label></li>
+  <li><label><input type="checkbox" id="p9" formControlName="confu_9"> Confusion</label></li>
+  <li><label><input type="checkbox" id="p10" formControlName="aggres_9"> Aggressive outbursts</label></li>
+  <li><label><input type="checkbox" id="p11" formControlName="halluc_9"> Hallucination</label></li>
+  <li><label><input type="checkbox" id="p12" formControlName="para_9"> Paranoia</label></li>
+</td>
+<p><b>Chronic health problems</b></p>
+<td>
+  <li><label><input type="checkbox" id="p13" formControlName="depress1_9"> Depression</label></li>
+  <li><label><input type="checkbox" id="p14" formControlName="sucid1_9"> Sucidial ideation/attempts</label></li>
+  <li><label><input type="checkbox" id="p15" formControlName="confu1_9"> Confusion</label></li>
+  <li><label><input type="checkbox" id="p16" formControlName="aggres1_9"> Aggressive outbursts</label></li>
+  <li><label><input type="checkbox" id="p17" formControlName="halluc1_9"> Hallucination</label></li>
+  <li><label><input type="checkbox" id="p18" formControlName="para1_9"> Paranoia</label></li>
+</td>
+<p>History of previous health injuries, if any</p>
+<p><b>Other information</b></p>
+<label>Use of tobacco products-Smoking/Pan chewing/Others:<input type="text" id="p19" formControlName="uotp_9"> </label>
+<p>Knowledge of allergy to specific Drugs:
+<input type="radio" name="knowledge_9" formControlName="knowledge_9" value="present">Present
+<input type="radio" name="knowledge_9" formControlName="knowledge_9" value="absent">Absent</p>
+
+  <br>
+<br>
+<button type="submit" [disabled]="!formData.valid">Save</button>
+<div id="b1">
+  <a routerLink="../page8" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252);display: inline-block; vertical-align: top;"><b>P</b></a> 
+   <b id="b2" style="text-decoration: none; color:black; background-color: rgb(243, 237, 237);display: inline-block; vertical-align: top;">9</b>
+  <a [routerLink]="['../page10', { addictName: formData.get('addictname')?.value }]" style="text-decoration: none; color:black; background-color: rgb(255, 252, 252); display: inline-block; vertical-align: top;"><b>N</b></a> 
+</div>
+</div>
+</form>
+</body>

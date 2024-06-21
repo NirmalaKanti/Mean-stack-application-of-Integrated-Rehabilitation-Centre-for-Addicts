@@ -1,0 +1,182 @@
+
+  /* body {
+    width: 100%;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+    border:20px;
+    height:100vh;
+    max-height: 800px;
+    height:100px;
+  }
+  .id1 {
+    border: double 6px rgb(66, 64, 64);
+    outline: solid 2px rgb(68, 64, 64);
+    margin: 50px;
+    margin-top: 40px;
+    height: 190vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  } */
+
+  textarea {
+    max-width: 100%;
+  }
+
+  body {
+    max-width: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 4px solid black; */
+    overflow-x: hidden;
+ 
+    border: double 6px rgb(66, 64, 64);
+      outline: solid 2px rgb(68, 64, 64);
+
+      padding-left: 20px;
+      padding-right: 20px;
+  /* width: 1200px; */
+  /* border: 2px solid black; */
+  /* margin: 7px; */
+
+  background-color: var(--Lgrey);
+} 
+
+
+  .table-container {
+  overflow-x: auto;
+  max-width: 100%;
+ }
+  #p1 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+  }
+  table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 5px; 
+  }
+
+  th,td {
+     padding: 8px;
+    text-align:left;
+    width:10%; 
+  }
+  table, th, td 
+    {
+       border: 1px solid black;
+       width:70%;
+    }
+  td input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .form-input {
+    width: 0%;
+    padding: 0.5px;
+    margin-left: 20px;
+    border: 0.5px solid #fff8f8;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 100px;
+  }
+
+  hr {
+    border-color: black;
+    margin-bottom: 20%;
+  }
+
+  #p2 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    /* width: 70%;*/
+  }
+
+  #p2 p input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    width: 70%;
+  }
+
+  #nk {
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+  #b1 a {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  #b1 #b2 {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    left: 69%;
+  }
+  .remove-button { 
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    color: rgb(219, 34, 34);
+    font-weight: bold;
+    font-size: 14px;
+    background: rgb(209, 83, 83);
+    border-radius: 50%;
+    opacity: 0; 
+    transition: opacity 0.3s;
+  }
+  .remove-button:hover {
+    opacity: 1;
+  }
+  .form-input {
+    width: 20%;
+  }
+  div {
+column-gap: 10px;
+}

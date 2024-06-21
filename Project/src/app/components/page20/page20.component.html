@@ -1,0 +1,352 @@
+<style>
+  
+  body {
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+     }
+
+.id1 {
+        border: double 6px rgb(66, 64, 64);
+         outline: solid 2px rgb(68, 64, 64);
+         margin: 40px;
+         min-height: 60vh;
+         padding-left: 20px;
+         padding-right: 20px;
+         box-sizing: border-box; 
+    }
+  .table-container {
+  overflow-x: auto;
+  max-width: 100%;
+ }
+  #p1 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+  }
+  table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 5px; 
+  }
+
+  th,td {
+     padding: 8px;
+    text-align:left;
+    width:10%; 
+  }
+  table, th, td 
+    {
+       border: 1px solid black;
+       width:70%;
+    }
+  td input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .form-input {
+    width: 0%;
+    padding: 0.5px;
+    margin-left: 20px;
+    border: 0.5px solid #fff8f8;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 100px;
+  }
+
+  hr {
+    border-color: black;
+    margin-bottom: 20%;
+  }
+
+  #p2 input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    /* width: 70%;*/
+  }
+
+  #p2 p input[type="text"] {
+    border: none;
+    background: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    width: 70%;
+  }
+
+  #nk {
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+  #b1 a {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  #b1 #b2 {
+    position: relative;
+    left: 48%;
+    text-decoration: none;
+    border: 2px double rgb(100, 97, 97);
+    border-radius: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    left: 69%;
+  }
+  .remove-button { 
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    color: rgb(219, 34, 34);
+    font-weight: bold;
+    font-size: 14px;
+    background: rgb(209, 83, 83);
+    border-radius: 50%;
+    opacity: 0; 
+    transition: opacity 0.3s;
+  }
+  .remove-button:hover {
+    opacity: 1;
+  }
+  .form-input {
+    width: 20%;
+  }
+  div {
+column-gap: 10px;
+}
+</style>
+<body>
+  <div class="id1">
+    <form action="" [formGroup]="formData" (ngSubmit)="onSubmit()">
+      <h1>Case history form and treatment plan</h1>
+      Socio demographic information&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Registration No:<input
+        type="text"
+        id="regno"
+        formControlName="regno_20"
+        style="width: 250px; border: none;"
+      /><br>
+      <br><br>
+      Name:<input
+        type="text"
+        id="nm"
+        formControlName="name_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Sex:<input
+        type="text"
+        id="s"
+        formControlName="sex_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Age:<input
+        type="text"
+        id="age"
+        formControlName="age_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Date Of Birth:<input
+        type="text"
+        id="dor"
+        formControlName="dob_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Religion:<input
+        type="text"
+        id="rel"
+        formControlName="religion_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Community:<input
+        type="text"
+        id="com"
+        formControlName="community_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Educational qualification(Specify):<input
+        type="text"
+        id="edu"
+        formControlName="eduquali_20"
+        style="width: 250px; border: none"
+      />
+      <br><br>
+      Occupation:<input
+        type="text"
+        id="occu"
+        formControlName="occupation_20"
+        style="width: 250px; border: none"
+      />&nbsp;&nbsp;&nbsp;&nbsp;Income:<input type="text" id="income" formControlName="income" style="width: 250px; border: none"/>
+      <br><br>
+      Marital Status:<input
+        type="text"
+        id="ms"
+        formControlName="marital_status_20"
+        style="width: 250px; border: none"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <br><br>
+      Living arrangements:<input
+        type="text"
+        id="la"
+        formControlName="living_arrange_20"
+        style="width: 250px; border: none"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <br><br>
+      Name of family member/support person accompanied the patient:<input
+        type="text"
+        id="familymem"
+        formControlName="familymem_20"
+        style="width: 250px; border: none"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      Telephone no.<input type="number" id="tele"
+      formControlName="tele_20"
+      style="width: 250px; border: none"/>
+      <br><br>
+      <div class="table-container">
+      <table class="w-full text-left">
+        <thead>
+          <tr>
+            <th class="pb-1 border-b-1">Referral:</th>
+            <th class="pb-1 border-b-1">Self</th>
+            <th class="pb-1 border-b-1">Recovered Addict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td><div class="border px-2 py-2" contenteditable="false"></div>Friends</td>
+            <td><div class="border px-2 py-2" contenteditable="false"></div>Employer</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Family</td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Media</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Social Worker</td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Through awareness programmes</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Physicians</td>
+              <td><div class="border px-4 py-2" contenteditable="false"></div>Any other</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+      <br/>
+            <div class="table-container">
+            <table class="w-full text-left">
+              <thead>
+                  <tr>
+                      <td>Prior treatment for addiction:</td>
+                      <td>Year</td>
+                      <td>Place of treatment</td>
+                      <td>Days/months of sobriety</td>
+                    </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="q122" formControlName="year_20" style="width: 100%; border: black"></div></td>
+                  <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q123" formControlName="place_treat_20" style="width: 100%; border: black"></div></td>
+                  <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q124" formControlName="day_sobriety_20" style="width: 100%; border: black"></div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="q125" formControlName="year1_20" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q126" formControlName="place_treat1_2" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q127" formControlName="day_sobriety1_20" style="width: 100%; border: black"></div></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="number" id="q128" formControlName="year2_20" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q129" formControlName="place_treat2_2" style="width: 100%; border: black"></div></td>
+                    <td><div class="border px-4 py-2" contenteditable="true"><input type="text" id="q130" formControlName="day_sobriety2_20" style="width: 100%; border: black"></div></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+  <button type="submit" [disabled]="!formData.valid">Save</button>
+      <div id="b1">
+        <a
+          routerLink="../page13"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>P</b></a
+        >
+        <b
+          id="b2"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(243, 237, 237);
+            display: inline-block;
+            vertical-align: top;
+          "
+          >20</b
+        >
+        <a
+          [routerLink]="[
+            '../page21',
+            { addictName: formData.get('addictname')?.value }
+          ]"
+          style="
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 252, 252);
+            display: inline-block;
+            vertical-align: top;
+          "
+          ><b>N</b></a
+        >
+      </div>
+    </form>
+  </div>
+</body>
